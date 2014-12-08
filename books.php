@@ -71,6 +71,7 @@ if($sts!=""){
 				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
 					<input type="submit" name="tambah" value=" PINJAM " >
 				</form>
+			</td>
 		</tr>
 		<?php } ?>
 		
