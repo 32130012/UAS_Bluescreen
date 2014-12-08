@@ -11,7 +11,7 @@
 	<br />
 	<h2 style="margin-left:30px;"><font color="white">Daftar Anggota BlueScreen Library</font></h2>
 	
-	<form method="POST" action="edit_user_proses.php" enctype="multipart/form-data">
+	<form method="POST" action="form_user_proses.php" enctype="multipart/form-data">
 	<table cellpadding="20" cellspacing="20" style="margin-left: 20px;">
 		<tr>
 			<td>
