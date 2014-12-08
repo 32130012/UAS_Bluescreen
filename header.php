@@ -1,7 +1,7 @@
 <?php //filename: index.php
 include("koneksi.php");
 		
-$sql="SELECT * FROM DB_NAME";
+$sql="SELECT * FROM menu";
 $hasil=mysqli_query($koneksi, $sql);
 ?>
 <html>
@@ -26,7 +26,15 @@ $hasil=mysqli_query($koneksi, $sql);
 			<li><a href='gallery.php'>Gallery</a></li>
 			<li><a href='services.php'>Services</a></li>
 			<li><a href='about.php'>About Us</a></li>
-			
+<?php			
+			while($baris=mysqli_fetch_assoc($hasil)){
+	echo "<ul>";
+	echo "<li>" . $baris['konten'] . "</li>";
+	echo "</ul>";
+	
+		
+		}
+?>			
 		</ul>
 		
 	<form method="POST" action="search.php"> 

@@ -13,7 +13,7 @@
     </div>
 	</div>
 	
-PROFILE SAYA : <br /><p>
+<font color="white"> PROFILE SAYA :<font> <br /><p>
 <?php
 	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	if($_SESSION['status']=="login"){
