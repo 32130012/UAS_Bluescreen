@@ -1,26 +1,18 @@
-<?php //filename: form_login_user.php
+<?php
+include("header.php");
+
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BlueScreen Library Form</title>
 </head>
 <body>
+<br />
 	<br />
-	<br />
-	<h2 style="margin-left:30px;"><font color="white">Daftar Anggota BlueScreen Library</font></h2>
-	
+	<h2 style="margin-left:30px;"><font color="white">EDIT USER</font></h2>
 	<form method="POST" action="edit_user_proses.php" enctype="multipart/form-data">
 	<table cellpadding="20" cellspacing="20" style="margin-left: 20px;">
-		<tr>
-			<td>
-			<label>username   :</label>
-			</td>
-			<td>
-			<input type="text" name="nama" value="" /> <br />
-			</td>
-		</tr>
 		<tr>
 			<td>
 			<label>password  :</label>
@@ -88,13 +80,16 @@
 			<td>
 			</td>
 			<td>
-			<input type="submit" name="submit" value="  SUBMIT  " />
+			<input type="submit" name="submit" value="  UPDATE  " />
 			<input type="reset" name="clear" value="  CLEAR  " />
 			</td>
 		</tr>
 	</table>
 	</form>
 
-
+	
 </body>
 </html>
+<?php
+include("footer.php");
+?>

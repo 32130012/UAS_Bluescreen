@@ -13,7 +13,7 @@
     </div>
 	</div>
 	
-PROFILE SAYA : <br />
+PROFILE SAYA : <br /><p>
 <?php
 	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	if($_SESSION['status']=="login"){
@@ -21,9 +21,9 @@ PROFILE SAYA : <br />
 		$sql = "SELECT * FROM user WHERE nama = '".$user."'";
 		$hasil = mysqli_query($koneksi,$sql);
 		$username = mysqli_fetch_array($hasil); 
-		?> <br /> <?php
-		echo $username[9];
-		?> <br /> <?php
+		?> <br />
+		<img src= "<?php	echo $username[9]; ?>" style="width:150px; height:200px" />
+		<br /> <?php
 		echo "ID Member &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $username[0];
 		?> <br /> <?php
 		echo "Nama User &nbsp &nbsp = " . $username[1];
@@ -39,11 +39,11 @@ PROFILE SAYA : <br />
 		}
 	else {
 		echo "User tidak Login"; }
-?>
+?></p>
 	<br />
 	<form method="POST" action="edit_profil.php">
 		<input type="submit" name="edit" value="Edit Profil" />
-		<input type="button" name="delete" value="Hapus Saya" />
+		
 	</form>
 	<br />
 	<hr style="color: #4B7B9F;">

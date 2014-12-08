@@ -1,5 +1,6 @@
 <?php
 SESSION_START();
+
 include("koneksi.php");
 
 $sql="SELECT * FROM user WHERE nama = '$_POST[nama]'";
@@ -19,7 +20,6 @@ $newpass = crypt($password,$salt);
 if($newpass == $baris['password']){
 	$_SESSION['status']="login";
 	$_SESSION['nama']="$_POST[nama]";
-	echo $_SESSION['nama'];
 	header('Location:home.php');
 	}
 	else{	

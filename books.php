@@ -11,8 +11,7 @@
 		
     </div>
 	</div>
-</div>
-<style="margin-top:-3000px;"> </style>
+
 Books kategori : 
 <form method="POST">
 <select name="kategori">
@@ -103,6 +102,7 @@ else {
 		<?php } ?>
 		
 	</table>
+	</div>
 <!--tampilkan data buku dari database
 	tambahin kolom status di tabel buku, boolean jika 0 = komik
 -->	<br />
