@@ -10,15 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/dawn_aria.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Akibat bencana gempa dahsyat yang melanda wilayah Tokyo, Aria yang tak punya rumah lagi akhirnya tinggal di rumah keluarga Nishimikado. Sementara itu, Natsuo makin diombang-ambingkan oleh perasaan sayangnya pada Aria.
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Dawn Aria'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -29,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

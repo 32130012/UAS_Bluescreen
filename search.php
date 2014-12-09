@@ -30,5 +30,6 @@
 		echo "alert('Buku Tidak Ditemukan !')";
 		echo "</script>";
 		echo "<a href='check_login.php'>BACK TO HOME</a>";
+	
 	}
 ?>

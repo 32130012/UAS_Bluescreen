@@ -10,17 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/conan.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Siapa tak kenal conan? Detektif cilik jelmaan shinici kudo yang tubuhnya menciut karena racun dari kawanan berjubah hitam. 
-	Kali ini, dalam penyamarannya sebagai anak sd , dia masih bisaa membagi waktu antara memecahkan kasus dan bermain dengan kelompok detektif ciliknya. 
-	Kali ini conan beraksi dalam kasus pendek yang cukup menegangkan.
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Detective Conan'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -31,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

@@ -10,19 +10,8 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/jasmine.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	“Kisah yang fantastis, mempercepat laju adrenalin! Diksi cintanya terasa segar, kisah para hacker Dean dan Ioran disajikan penuh petualangan. Tidak akan bosan dan kecewa membacanya.” 
-
-	Tidak mudah menggabungkan tema yang cukup rumit dengan romansa. Tetapi Lyta dengan kecermatan dan ketekunannya telah  berhasil melewatinya. 
-	<br />
 	<?php
-		$sql = "SELECT * FROM buku WHERE judul = 'Jasmine (Cinta yang Menyembuhkan)'";
+		$sql = "SELECT * FROM buku WHERE judul = 'Jasmine ( Cinta yang Menyembuhkan)'";
 		$hasil = mysqli_query($koneksi,$sql);
 		$book = mysqli_fetch_array($hasil); 
 		if($book[6]=='1'){
@@ -31,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

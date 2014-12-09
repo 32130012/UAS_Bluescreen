@@ -10,22 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/12menit.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Elaine, sang pemain biola, yakin bahwa musik adalah segala-galanya. Namun, ayahnya menentang, menganggapnya sia-sia. 
-
-Tara, berusaha menguasai nada-nada snare drum meski memiliki keterbatasan pendengaran. Tetapi, luka masa lalunya terus menghantui.Lahang, di tengah deritanya, berusaha memenuhi janji pada sang ayah. Namun, dilema membuatnya ragu melangkah. 
-
-Rene bermimpi membawa mereka, tim marching band yang dilatihnya, menjadi juara.  Meskipun mereka hanya datang dari sebuah kota di pelosok negeri. Meskipun orang lain menganggap itu mustahil. 
-
-Mereka berlatih ribuan jam hanya demi 12 menit penentuan. Mereka bertekad membuktikan pada dunia. Bahwa mimpi harus kau percayai agar terwujud. Dreaming is believing. Dan bersama-sama mereka akan menyerukan, Vincero!
-
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = '12menit'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -36,6 +20,15 @@ Mereka berlatih ribuan jam hanya demi 12 menit penentuan. Mereka bertekad membuk
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

@@ -10,19 +10,6 @@
 		
     </div>
 	</div>	
-<div class="zoom">
-	<img src="gambar/buku/amore.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Cinta pertama tidak pernah mati. Mungkin itulah kalimat yang cocok untuk melukiskan keadaan Mel saat ini. Meskipun telah ada seorang pria dengan predikat nyaris sempurna di sisinya, jauh di dalam hatinya nama Elang tetap terukir.
-
-Setelah bertahun-tahun hidup selibat, Elang tidak berharap lagi untuk bisa menemukan sebentuk cinta. Dia bahkan sudah berhenti mencarinya! Elang sadar sepenuhnya bahwa hidup yang dia jalani sekarang bukanlah jenis hidup yang bisa melibatkan cinta.
-
-Ketika takdir mempertemukan mereka, mampukah Mel dan Elang mengumpulkan kembali serpihan-serpihan hati yang dulu pernah mereka patahkan? Ataukah mereka harus menyerah saat nyawa menjadi taruhan masa depan mereka?
-
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Amore Cinta yang tak Terlupakan'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -33,7 +20,16 @@ Ketika takdir mempertemukan mereka, mampukah Mel dan Elang mengumpulkan kembali 
 		else {
 			$genre="Komik";
 		}
-		?> <br /> <?php
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
+		?><br /><?php	
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php
 		echo "Genre &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $genre;

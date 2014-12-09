@@ -10,17 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/basara.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Sarasa akhirnya mengejar Asagi yang dipanggil ke istana sebagai Raja Biru. Gadis itu berniat memastikan keinginan hati Asagi. 
-
-	Shuri yang menyadarinya mengejar Sarasa ke istana! Namun, yang dilihat sesampainya di istana adalah Asagi dan Sarasa saling menghunus pedang!?
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Basara'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -31,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

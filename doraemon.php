@@ -10,15 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/doraemon.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	nobita kembali menginginkan sesuatu yang aneh. namun, kali ini dia menginginkan untuk berkeliling dunia dengan sizuka. didorong dengan paksaan yang kuat akhirnya pun doraemon memenuhi keinginann nobita. akhirnya, mereka pun berpetualang dengan kereta api ekspress milik doraemon.
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Doraemon Petualangan'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -29,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

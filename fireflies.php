@@ -10,29 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/fireflies.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	"Aku ingin minta maaf.
-karena telah membuatmu khawakir. 
-Kamu harus percaya kalau aku telah berusaha 
-melakukan apa pun untuk bersamamu, 
-tapi aku tidak bisa.
-Karena itu berjanjilah, kamu tetap akan menjadi
-seperti yang dulu aku kenal.
-
-Tersenyum dan tertawa senantiasa..,
-sebab aku tidak pernah meninggalkanmu.
-Dulu, sekarang, dan kapan pun juga,
-kuminka kamu tidak menyesali
-hari-hari yang kita lewati bersama.
-Dan inilah gang terakhir kalinya kuucapkan padamu..
-Aku mencintaimu dengan sepenuh hati."
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Fireflies'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -43,6 +20,15 @@ Aku mencintaimu dengan sepenuh hati."
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php
