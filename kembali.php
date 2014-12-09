@@ -12,7 +12,7 @@
 		$hasil = mysqli_query($koneksi,$sql);
 		$kembali = mysqli_fetch_array($hasil);
 		if($kembali>0){
-			$sql="INSERT INTO tr_pinjam_hdr (tgl_kembali) VALUES (NOW())";
+			$sql="UPDATE tr_pinjam_hdr SET tgl_kembali=now()";
 			mysqli_query($koneksi,$sql);
 		/*$sql="INSERT INTO tr_pinjam_dtl(id_hdr,id_buku) VALUES(id_hdr,*/
 		} else {

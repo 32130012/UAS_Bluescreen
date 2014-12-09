@@ -58,40 +58,40 @@ else {
 			<td>
 				<?php
 				if($buku[1]=="12menit"){
-				?><a href="menit.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Doraemon Petualangan"){
-				?><a href="doraemon.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Fireflies"){
-				?><a href="fireflies.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Inazuma Eleven"){
-				?><a href="inazuma.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Dawn Aria"){
-				?><a href="dawn_aria.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Jasmine (Cinta yang Menyembuhkan)"){
-				?><a href="jasmine.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Kuroko's Basketball"){
-				?><a href="kuroko.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Snow In The Heart"){
-				?><a href="snow.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Detective Conan"){
-				?><a href="conan.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Basara"){
-				?><a href="basara.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Notasi"){
-				?><a href="notasi.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php }
 				else if($buku[1]=="Amore Cinta yang tak Terlupakan"){
-				?><a href="amore.php"><?php echo $buku[1]; ?></a>
+				?><a href="buku.php"><?php echo $buku[1]; ?></a>
 				<?php } ?>
 			</td>
 			<td><?php echo $buku[2]; ?></td>

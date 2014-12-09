@@ -11,17 +11,13 @@
     </div>
 	</div>
 	<?php
-		$sql = "SELECT * FROM buku WHERE judul = 'Detective Conan'";
-		$hasil = mysqli_query($koneksi,$sql);
-		$book = mysqli_fetch_array($hasil); 
-		if($book[6]=='1'){
-			$genre="Novel";
+		if(isset($_GET('id_buku'))){
+			$id_buku=$_GET['id_buku'];
 		}
-		else {
-			$genre="Komik";
-		}
-		?> <br />
-<div class="zoom">
+		$sql="SELECT * FROM buku where id_buku='$id_buku'";
+		$hasil=mysqli_query($koneksi,$sql);
+		while($page=mysqli_fetch_object($hasil)){
+		?>	<div class="zoom">
 	<img src=" <?php echo $book[8]; ?> ">
 </div>
 <div class="isi">
@@ -51,7 +47,8 @@
 		<input type="submit" name="kembali" value="  KEMBALI  ">
 	</form>
 </b></p>
-</div>
+	<?php	}
+	?>
 
 </div>
 <?php
