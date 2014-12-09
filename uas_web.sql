@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2014 at 12:15 PM
+-- Generation Time: Dec 09, 2014 at 06:37 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -53,29 +53,29 @@ CREATE TABLE IF NOT EXISTS `buku` (
   `bahasa` varchar(50) NOT NULL,
   `tahun` varchar(5) NOT NULL,
   `stok` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
+  `status` varchar(50) NOT NULL,
   `sinopsis` varchar(1000) NOT NULL,
   `gambar` text NOT NULL,
   PRIMARY KEY (`id_buku`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `buku`
 --
 
 INSERT INTO `buku` (`id_buku`, `judul`, `pengarang`, `bahasa`, `tahun`, `stok`, `status`, `sinopsis`, `gambar`) VALUES
-(1, '12menit', 'Oka Aurora', 'Indonesia', '2013', 5, 1, 'Elaine, sang pemain biola, yakin bahwa musik adalah segala-galanya. Namun, ayahnya menentang, menganggapnya sia-sia. \r\n\r\nTara, berusaha menguasai nada-nada snare drum meski memiliki keterbatasan pendengaran. Tetapi, luka masa lalunya terus menghantui.Lahang, di tengah deritanya, berusaha memenuhi janji pada sang ayah. Namun, dilema membuatnya ragu melangkah. \r\n\r\nRene bermimpi membawa mereka, tim marching band yang dilatihnya, menjadi juara.  Meskipun mereka hanya datang dari sebuah kota di pelos', 'gambar/buku/12menit.PNG'),
-(2, 'Doraemon Petualangan', 'Fujiko', 'Indonesia', '2002', 5, 2, 'nobita kembali menginginkan sesuatu yang aneh. namun, kali ini dia menginginkan untuk berkeliling dunia dengan sizuka. didorong dengan paksaan yang kuat akhirnya pun doraemon memenuhi keinginann nobita. akhirnya, mereka pun berpetualang dengan kereta api ekspress milik doraemon.', 'gambar/buku/doraemon.PNG'),
-(3, 'Fireflies', 'Aletheia Agatha', 'Indonesia', '2013', 5, 1, '"Aku ingin minta maaf.\r\nkarena telah membuatmu khawakir. \r\nKamu harus percaya kalau aku telah berusaha \r\nmelakukan apa pun untuk bersamamu, \r\ntapi aku tidak bisa.\r\nKarena itu berjanjilah, kamu tetap akan menjadi\r\nseperti yang dulu aku kenal.\r\n\r\nTersenyum dan tertawa senantiasa..,\r\nsebab aku tidak pernah meninggalkanmu.\r\nDulu, sekarang, dan kapan pun juga,\r\nkuminka kamu tidak menyesali\r\nhari-hari yang kita lewati bersama.\r\nDan inilah gang terakhir kalinya kuucapkan padamu..\r\nAku mencintaimu dengan sepenuh hati."', 'gambar/buku/fireflies.PNG'),
-(4, 'Inazuma Eleven', 'Yabuno Tenya', 'Jepang', '2012', 5, 2, 'Ini merupakan sejumput situasi putus asa Jepang karena permainan FFI (Football Frontier International) VS Qatar.\r\n	Dan Korea yang berkemampuan No.1 sudah menunggu di final... Apakah ini klimaks kualifikasi Asia.', 'gambar/buku/inazuma.PNG'),
-(5, 'Dawn Aria', 'Akaishi Michiyo', 'Inggris', '2012', 5, 2, 'Akibat bencana gempa dahsyat yang melanda wilayah Tokyo, Aria yang tak punya rumah lagi akhirnya tinggal di rumah keluarga Nishimikado. Sementara itu, Natsuo makin diombang-ambingkan oleh perasaan sayangnya pada Aria.', 'gambar/buku/dawn_aria.PNG'),
-(6, 'Jasmine (Cinta yang Menyembuhkan)', 'Riawani Elyta', 'Indonesia', '2013', 5, 1, '"Kisah yang fantastis, mempercepat laju adrenalin! Diksi cintanya terasa segar, kisah para hacker Dean dan Ioran disajikan penuh petualangan. Tidak akan bosan dan kecewa membacanya.” \r\n\r\n	Tidak mudah menggabungkan tema yang cukup rumit dengan romansa. Tetapi Lyta dengan kecermatan dan ketekunannya telah  berhasil melewatinya.', 'gambar/buku/jasmine.PNG'),
-(7, 'Kuroko''s Basketball', 'Fujimaki Tadatoshi', 'Indonesia', '2014', 5, 2, 'Kekalahan telak melawan Touou menyisihkan Seirin dari ajang I.H. Tapi mereka tak patah semangat untuk mengejar target selanjutnya: Winter Cup!', 'gambar/buku/kuroko.PNG'),
-(8, 'Snow In The Heart', 'Veronica Faradilla', 'Indonesia', '2013', 5, 1, 'Aku tidak banyak berbicang dengan teman-teman sekelas, meskipun kemungkinan aku tidak akan bertemu mereka lagi. Termasuk kamu, Kaori ya, ini hari perpisahan kelas kita Kulihat kamu sibuk berpelukan dengan Nao, Manoko, dan reiko. Kita semua memang harus berpisah, bukan?\r\n\r\nSebenarnya, Kaori, ada satu keinginanku yang tidak mungkin terpenuhi, yakni memberikan kancing kedua seragamku padamu. Aku iri melihat siswa-siswa yang lain memberikan kancing milik mereka kepada gadis yang disukai. Tapi aku tak bisa. Aku takut kamu tolak, Kaori. Aku hanya mencoba menegakkan tubuhku. Meski aku tahu cintaku bertepuk sebelah tangan, tetapi masa depanku masih panjang. Aku harus belajar mati-matian untuk masuk Todai. Ujian masuk Todai tentunya sangat berat.\r\n\r\n"Sayonara, Kaori, Daisuki da!" ujarku. Semoga angin yang berembus sudi menyampaikan pesan ini kepadamu. Semoga kamu tidak membenciku.', 'gambar/buku/snow.PNG'),
-(9, 'Detective Conan', 'Elex', 'Indonesia', '2001', 5, 2, 'Siapa tak kenal conan? Detektif cilik jelmaan shinici kudo yang tubuhnya menciut karena racun dari kawanan berjubah hitam. \r\n	Kali ini, dalam penyamarannya sebagai anak sd , dia masih bisaa membagi waktu antara memecahkan kasus dan bermain dengan kelompok detektif ciliknya. Kali ini conan beraksi dalam kasus pendek yang cukup menegangkan.', 'gambar/buku/conan.PNG'),
-(10, 'Basara', 'Tamura Yumi', 'Indonesia', '2012', 5, 2, 'Sarasa akhirnya mengejar Asagi yang dipanggil ke istana sebagai Raja Biru. Gadis itu berniat memastikan keinginan hati Asagi. \r\nShuri yang menyadarinya mengejar Sarasa ke istana! Namun, yang dilihat sesampainya di istana adalah Asagi dan Sarasa saling menghunus pedang!?\r\n', 'gambar/buku/basara.PNG'),
-(11, 'Notasi', 'Morra Q', 'Indonesia', '2013', 5, 1, 'Rasanya, sudah lama sekali sejak aku dan dia melihat pelangi dilangit utara Pogung. \r\n	Namun, kembali ke kota ini, seperti menyeruakkan semua ingatan tentangnya; tentang janji yang terucap seiring jemari kami bertautan. \r\n\r\n	Segera setelah semuanya berakhir, aku pasti akan menghubungimu lagi.\r\n\r\nItulah yang dikataknnya sebelum dia pergi. Dan aku mendekap erat-erat kata-kata itu, menanti dalam harap. Namunm, yang datang padaku hanyalah surat-surat tanpa alamat darinya. \r\nKini, ditempat yang sama, aku mengurai kembali kenangan-kenangan itu..', 'gambar/buku/notasi.PNG'),
-(13, 'Amore Cinta yang tak Terlupakan', 'Rini Zabirudin', 'Indonesia', '2013', 5, 1, 'Cinta pertama tidak pernah mati. Mungkin itulah kalimat yang cocok untuk melukiskan keadaan Mel saat ini. Meskipun telah ada seorang pria dengan predikat nyaris sempurna di sisinya, jauh di dalam hatinya nama Elang tetap terukir.\r\n\r\nSetelah bertahun-tahun hidup selibat, Elang tidak berharap lagi untuk bisa menemukan sebentuk cinta. Dia bahkan sudah berhenti mencarinya! Elang sadar sepenuhnya bahwa hidup yang dia jalani sekarang bukanlah jenis hidup yang bisa melibatkan cinta.\r\n\r\nKetika takdir mempertemukan mereka, mampukah Mel dan Elang mengumpulkan kembali serpihan-serpihan hati yang dulu pernah mereka patahkan? Ataukah mereka harus menyerah saat nyawa menjadi taruhan masa depan mereka?', 'gambar/buku/amore.PNG');
+(1, '12menit', 'Oka Aurora', 'Indonesia', '2013', 5, 'Novel', 'Elaine, sang pemain biola, yakin bahwa musik adalah segala-galanya. Namun, ayahnya menentang, menganggapnya sia-sia. \r\n\r\nTara, berusaha menguasai nada-nada snare drum meski memiliki keterbatasan pendengaran. Tetapi, luka masa lalunya terus menghantui.Lahang, di tengah deritanya, berusaha memenuhi janji pada sang ayah. Namun, dilema membuatnya ragu melangkah. \r\n\r\nRene bermimpi membawa mereka, tim marching band yang dilatihnya, menjadi juara.  Meskipun mereka hanya datang dari sebuah kota di pelos', 'gambar/buku/12menit.PNG'),
+(2, 'Doraemon Petualangan', 'Fujiko', 'Indonesia', '2002', 5, 'Komik', 'nobita kembali menginginkan sesuatu yang aneh. namun, kali ini dia menginginkan untuk berkeliling dunia dengan sizuka. didorong dengan paksaan yang kuat akhirnya pun doraemon memenuhi keinginann nobita. akhirnya, mereka pun berpetualang dengan kereta api ekspress milik doraemon.', 'gambar/buku/doraemon.PNG'),
+(3, 'Fireflies', 'Aletheia Agatha', 'Indonesia', '2013', 5, 'Novel', '"Aku ingin minta maaf.\r\nkarena telah membuatmu khawakir. \r\nKamu harus percaya kalau aku telah berusaha \r\nmelakukan apa pun untuk bersamamu, \r\ntapi aku tidak bisa.\r\nKarena itu berjanjilah, kamu tetap akan menjadi\r\nseperti yang dulu aku kenal.\r\n\r\nTersenyum dan tertawa senantiasa..,\r\nsebab aku tidak pernah meninggalkanmu.\r\nDulu, sekarang, dan kapan pun juga,\r\nkuminka kamu tidak menyesali\r\nhari-hari yang kita lewati bersama.\r\nDan inilah gang terakhir kalinya kuucapkan padamu..\r\nAku mencintaimu dengan sepenuh hati."', 'gambar/buku/fireflies.PNG'),
+(4, 'Inazuma Eleven', 'Yabuno Tenya', 'Jepang', '2012', 5, 'Komik', 'Ini merupakan sejumput situasi putus asa Jepang karena permainan FFI (Football Frontier International) VS Qatar.\r\n	Dan Korea yang berkemampuan No.1 sudah menunggu di final... Apakah ini klimaks kualifikasi Asia.', 'gambar/buku/inazuma.PNG'),
+(5, 'Dawn Aria', 'Akaishi Michiyo', 'Inggris', '2012', 5, 'Komik', 'Akibat bencana gempa dahsyat yang melanda wilayah Tokyo, Aria yang tak punya rumah lagi akhirnya tinggal di rumah keluarga Nishimikado. Sementara itu, Natsuo makin diombang-ambingkan oleh perasaan sayangnya pada Aria.', 'gambar/buku/dawn_aria.PNG'),
+(7, 'Kuroko''s Basketball', 'Fujimaki Tadatoshi', 'Indonesia', '2014', 5, 'Komik', 'Kekalahan telak melawan Touou menyisihkan Seirin dari ajang I.H. Tapi mereka tak patah semangat untuk mengejar target selanjutnya: Winter Cup!', 'gambar/buku/kuroko.PNG'),
+(8, 'Snow In The Heart', 'Veronica Faradilla', 'Indonesia', '2013', 5, 'Novel', 'Aku tidak banyak berbicang dengan teman-teman sekelas, meskipun kemungkinan aku tidak akan bertemu mereka lagi. Termasuk kamu, Kaori ya, ini hari perpisahan kelas kita Kulihat kamu sibuk berpelukan dengan Nao, Manoko, dan reiko. Kita semua memang harus berpisah, bukan?\r\n\r\nSebenarnya, Kaori, ada satu keinginanku yang tidak mungkin terpenuhi, yakni memberikan kancing kedua seragamku padamu. Aku iri melihat siswa-siswa yang lain memberikan kancing milik mereka kepada gadis yang disukai. Tapi aku tak bisa. Aku takut kamu tolak, Kaori. Aku hanya mencoba menegakkan tubuhku. Meski aku tahu cintaku bertepuk sebelah tangan, tetapi masa depanku masih panjang. Aku harus belajar mati-matian untuk masuk Todai. Ujian masuk Todai tentunya sangat berat.\r\n\r\n"Sayonara, Kaori, Daisuki da!" ujarku. Semoga angin yang berembus sudi menyampaikan pesan ini kepadamu. Semoga kamu tidak membenciku.', 'gambar/buku/snow.PNG'),
+(9, 'Detective Conan', 'Elex', 'Indonesia', '2001', 5, 'Komik', 'Siapa tak kenal conan? Detektif cilik jelmaan shinici kudo yang tubuhnya menciut karena racun dari kawanan berjubah hitam. \r\n	Kali ini, dalam penyamarannya sebagai anak sd , dia masih bisaa membagi waktu antara memecahkan kasus dan bermain dengan kelompok detektif ciliknya. Kali ini conan beraksi dalam kasus pendek yang cukup menegangkan.', 'gambar/buku/conan.PNG'),
+(10, 'Basara', 'Tamura Yumi', 'Indonesia', '2012', 5, 'Komik', 'Sarasa akhirnya mengejar Asagi yang dipanggil ke istana sebagai Raja Biru. Gadis itu berniat memastikan keinginan hati Asagi. \r\nShuri yang menyadarinya mengejar Sarasa ke istana! Namun, yang dilihat sesampainya di istana adalah Asagi dan Sarasa saling menghunus pedang!?\r\n', 'gambar/buku/basara.PNG'),
+(11, 'Notasi', 'Morra Q', 'Indonesia', '2013', 5, 'Novel', 'Rasanya, sudah lama sekali sejak aku dan dia melihat pelangi dilangit utara Pogung. \r\n	Namun, kembali ke kota ini, seperti menyeruakkan semua ingatan tentangnya; tentang janji yang terucap seiring jemari kami bertautan. \r\n\r\n	Segera setelah semuanya berakhir, aku pasti akan menghubungimu lagi.\r\n\r\nItulah yang dikataknnya sebelum dia pergi. Dan aku mendekap erat-erat kata-kata itu, menanti dalam harap. Namunm, yang datang padaku hanyalah surat-surat tanpa alamat darinya. \r\nKini, ditempat yang sama, aku mengurai kembali kenangan-kenangan itu..', 'gambar/buku/notasi.PNG'),
+(13, 'Amore Cinta yang tak Terlupakan', 'Rini Zabirudin', 'Indonesia', '2013', 5, 'Novel', 'Cinta pertama tidak pernah mati. Mungkin itulah kalimat yang cocok untuk melukiskan keadaan Mel saat ini. Meskipun telah ada seorang pria dengan predikat nyaris sempurna di sisinya, jauh di dalam hatinya nama Elang tetap terukir.\r\n\r\nSetelah bertahun-tahun hidup selibat, Elang tidak berharap lagi untuk bisa menemukan sebentuk cinta. Dia bahkan sudah berhenti mencarinya! Elang sadar sepenuhnya bahwa hidup yang dia jalani sekarang bukanlah jenis hidup yang bisa melibatkan cinta.\r\n\r\nKetika takdir mempertemukan mereka, mampukah Mel dan Elang mengumpulkan kembali serpihan-serpihan hati yang dulu pernah mereka patahkan? Ataukah mereka harus menyerah saat nyawa menjadi taruhan masa depan mereka?', 'gambar/buku/amore.PNG'),
+(14, 'Jasmine', 'Riawani Elyta', 'Indonesia', '2013', 5, 'Novel', '"Kisah yang fantastis, mempercepat laju adrenalin! Diksi cintanya terasa segar, kisah para hacker Dean dan Ioran disajikan penuh petualangan. Tidak akan bosan dan kecewa membacanya.” \r\n\r\n	Tidak mudah menggabungkan tema yang cukup rumit dengan romansa. Tetapi Lyta dengan kecermatan dan ketekunannya telah  berhasil melewatinya.', 'gambar/buku/jasmine.PNG');
 
 -- --------------------------------------------------------
 
@@ -104,21 +104,6 @@ INSERT INTO `menu` (`id_menu`, `konten`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tr_pinjam_dtl`
---
-
-CREATE TABLE IF NOT EXISTS `tr_pinjam_dtl` (
-  `id_dtl` int(11) NOT NULL AUTO_INCREMENT,
-  `id_hdr` int(11) NOT NULL,
-  `id_buku` int(11) NOT NULL,
-  PRIMARY KEY (`id_dtl`),
-  UNIQUE KEY `id_hdr` (`id_hdr`,`id_buku`),
-  KEY `id_buku` (`id_buku`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tr_pinjam_hdr`
 --
 
@@ -126,17 +111,24 @@ CREATE TABLE IF NOT EXISTS `tr_pinjam_hdr` (
   `id_hdr` int(11) NOT NULL AUTO_INCREMENT,
   `tgl_pinjam` date NOT NULL,
   `id_user` int(11) NOT NULL,
-  `tgl_kembali` date NOT NULL,
+  `tgl_kembali` date DEFAULT NULL,
+  `id_buku` int(11) NOT NULL,
   PRIMARY KEY (`id_hdr`),
-  UNIQUE KEY `id_user` (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+  KEY `id_user` (`id_user`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `tr_pinjam_hdr`
 --
 
-INSERT INTO `tr_pinjam_hdr` (`id_hdr`, `tgl_pinjam`, `id_user`, `tgl_kembali`) VALUES
-(30, '2014-12-09', 24, '0000-00-00');
+INSERT INTO `tr_pinjam_hdr` (`id_hdr`, `tgl_pinjam`, `id_user`, `tgl_kembali`, `id_buku`) VALUES
+(32, '2014-12-09', 24, '0000-00-00', 0),
+(33, '2014-12-09', 24, '0000-00-00', 0),
+(34, '2014-12-09', 24, '0000-00-00', 0),
+(35, '2014-12-09', 24, NULL, 1),
+(36, '2014-12-09', 24, '0000-00-00', 13),
+(37, '2014-12-09', 24, '0000-00-00', 7),
+(38, '2014-12-09', 24, NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -170,13 +162,6 @@ INSERT INTO `user` (`id_user`, `nama`, `password`, `tempat`, `tanggal`, `bulan`,
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `tr_pinjam_dtl`
---
-ALTER TABLE `tr_pinjam_dtl`
-  ADD CONSTRAINT `tr_pinjam_dtl_ibfk_1` FOREIGN KEY (`id_buku`) REFERENCES `buku` (`id_buku`),
-  ADD CONSTRAINT `tr_pinjam_dtl_ibfk_2` FOREIGN KEY (`id_hdr`) REFERENCES `tr_pinjam_hdr` (`id_hdr`);
 
 --
 -- Constraints for table `tr_pinjam_hdr`
