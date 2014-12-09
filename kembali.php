@@ -11,8 +11,9 @@
 		$sql = "SELECT * FROM tr_pinjam_hdr WHERE id_user = '".$npinjam."'";
 		$hasil = mysqli_query($koneksi,$sql);
 		$kembali = mysqli_fetch_array($hasil);
+		$id_buku=$_GET['id_buku'];
 		if($kembali>0){
-			$sql="UPDATE tr_pinjam_hdr SET tgl_kembali=now()";
+			$sql="UPDATE tr_pinjam_hdr SET tgl_kembali=now() WHERE id_buku = '$id_buku'";
 			mysqli_query($koneksi,$sql);
 		} else {
 		echo "<script type='text/javascript'>";

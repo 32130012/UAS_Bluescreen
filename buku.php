@@ -22,6 +22,7 @@
 </div>
 <div class="isi">
 <p><b>
+
 	<br />
 		<table cellpadding="5" cellspacing="3">
 			<tr>
@@ -29,6 +30,10 @@
 				<td valign="top"> : </td>
 				<td valign="top"> <p><?php echo $book[7]; ?></p> </td>
 			</tr>
+			<tr>
+				<td> ID Buku </td>
+				<td> : </td>
+				<td> <?php echo $book[0]; ?> </td>
 			<tr>
 				<td> Judul Buku </td>
 				<td> : </td>
@@ -46,12 +51,12 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<form method="POST" action="pinjam.php">
-						<input type="submit" name="pinjam" value="  PINJAM  ">
+					<form method="POST" action="pinjam.php?id_buku=<?php echo $book[0];?>">
+						<input type="submit" name="tambah" value="  PINJAM  ">
 					</form>  
 				</td>
 				<td>
-					<form method="POST" action="kembali.php">
+					<form method="POST" action="kembali.php?id_buku=<?php echo $book[0];?>">
 						<input type="submit" name="kembali" value="  KEMBALI  ">
 					</form> 
 				</td>
