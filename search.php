@@ -5,7 +5,7 @@
 		$sql="SELECT * FROM buku WHERE judul LIKE '%$_POST[cari]%'";
 		$hasil=mysqli_query($koneksi,$sql);
 		if(mysqli_num_rows($hasil)>0){
-			header('Location:buku.php');
+			header('Location:cari_buku.php');
 		} else {		
 			echo "<script type='text/javascript'>";
 			echo "alert('Buku Tidak Ditemukan !')";

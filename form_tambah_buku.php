@@ -66,7 +66,7 @@
 			<label>Sinopsis :</label>
 			</td>
 			<td>
-			<input type="textarea" name="sinopsis" value="" /> <br />
+			<textarea rows="4" name="sinopsis" value="" /></textarea> <br />
 			</td>
 		</tr>
 		<tr>

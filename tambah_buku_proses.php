@@ -45,13 +45,13 @@
 		$sql = "SELECT judul FROM buku WHERE judul = '".$judul."'";
 		$ada=mysqli_query($koneksi,$sql);
 		if(mysqli_num_rows($ada) == 0){
-			$sql ="INSERT INTO buku (judul, pengarang, bahasa, tahun, stok, status, sinopsis, gambar) VALUES('$nama', '$newpass', '$tempat', '$tanggal', '$bulan', '$tahun', '$alamat', '$email', '$tujuan')";
+			$sql ="INSERT INTO buku(judul, pengarang, bahasa, tahun, stok, status, sinopsis, gambar) VALUES ('$judul', '$pengarang', '$bahasa', '$tahun', '$stok', '$jenis', '$sinopsis', '$tujuan' )";
 			mysqli_query($koneksi,$sql);
 			header('Location:index.php');
 		}
 		else {
 			echo "<script type='text/javascript'>";
-			echo "alert('USERNAME SUDAH TERDAFTAR !')";
+			echo "alert('BUKU SUDAH TERDAFTAR !')";
 			echo "</script>";
 			echo "<a href='index.php'>BACK TO HOME</a>";
 		}

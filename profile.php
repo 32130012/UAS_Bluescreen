@@ -48,10 +48,8 @@
 ?></p>
 	<br /> <br />
 	<hr style="color: #4B7B9F;">
-	**daftar keinginan buku saya**
-	<br /> <br />
-	<hr style="color: #4B7B9F;">
 	**daftar peminjaman buku**
+	
 </div>
 	
 <?php

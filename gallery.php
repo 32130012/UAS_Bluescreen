@@ -27,7 +27,7 @@
 		<tr>
 			<td style="padding:10px;"> 
 				<div class="zoom">
-					<img src= "<?php echo $pic[8]; ?>" title=" <?php echo $pic[1]; ?> " />
+					<img src=" <?php echo $pic[8]; ?>" title=" <?php echo $pic[1]; ?> " style="width: 200px; height: 300px;" />
 				</div>
 			</td>
 		</tr>
