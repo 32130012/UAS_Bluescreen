@@ -10,16 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/inazuma.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Ini merupakan sejumput situasi putus asa Jepang karena permainan FFI (Football Frontier International) VS Qatar.
-	Dan Korea yang berkemampuan No.1 sudah menunggu di final... Apakah ini klimaks kualifikasi Asia.
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Inazuma Eleven'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -30,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

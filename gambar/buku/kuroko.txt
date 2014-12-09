@@ -1,7 +1,0 @@
-Kekalahan telak melawan Touou menyisihkan Seirin dari ajang I.H. Tapi mereka tak patah semangat untuk mengejar target selanjutnya: Winter Cup
-
-id: 
-judul: kuroko's basketball
-pengarang: fujimaki tadatoshi
-bahasa: indonesia
-tahun:2014

@@ -27,13 +27,14 @@ $hasil=mysqli_query($koneksi, $sql);
 			<li><a href='services.php'>Services</a></li>
 			<li><a href='about.php'>About Us</a></li>
 <?php			
-			while($baris=mysqli_fetch_assoc($hasil)){
+	/*		while($baris=mysqli_fetch_assoc($hasil)){
+
 	echo "<ul>";
 	echo "<li>" . $baris['konten'] . "</li>";
 	echo "</ul>";
 	
-		
-		}
+	//masih belum bisa ke link
+		}*/
 ?>			
 		</ul>
 		

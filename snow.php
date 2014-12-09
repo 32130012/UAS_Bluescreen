@@ -10,21 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/snow.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Aku tidak banyak berbicang dengan teman-teman sekelas, meskipun kemungkinan aku tidak akan bertemu mereka lagi. Termasuk kamu, Kaori ya, ini hari perpisahan kelas kita Kulihat kamu sibuk berpelukan dengan Nao, Manoko, dan reiko. Kita semua memang harus berpisah, bukan?
-
-Sebenarnya, Kaori, ada satu keinginanku yang tidak mungkin terpenuhi, yakni memberikan kancing kedua seragamku padamu. Aku iri melihat siswa-siswa yang lain memberikan kancing milik mereka kepada gadis yang disukai. Tapi aku tak bisa. Aku takut kamu tolak, Kaori. Aku hanya mencoba menegakkan tubuhku. Meski aku tahu cintaku bertepuk sebelah tangan, tetapi masa depanku masih panjang. Aku harus belajar mati-matian untuk masuk Todai. Ujian masuk Todai tentunya sangat berat.
-
-"Sayonara, Kaori, Daisuki da!" ujarku. Semoga angin yang berembus sudi menyampaikan pesan ini kepadamu. Semoga kamu tidak membenciku.
-
-Haru, Gemetar, membuat hati bergidik sedemikian sendunya. Sebuah kisah romance yang begitu lugas menuturkan tentang kesendirian dan kesepian, meski di dalam hati sungguh sesak oleh jubelan asa dan cinta.
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Snow In The Heart'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -35,6 +20,15 @@ Haru, Gemetar, membuat hati bergidik sedemikian sendunya. Sebuah kisah romance y
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php

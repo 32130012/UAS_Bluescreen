@@ -10,21 +10,6 @@
 		
     </div>
 	</div>
-	
-<div class="zoom">
-	<img src="gambar/buku/notasi.png">
-</div>
-<div class="isi">
-<p><b>
-	Synopsis : <br />
-	Rasanya, sudah lama sekali sejak aku dan dia melihat pelangi dilangit utara Pogung. 
-	Namun, kembali ke kota ini, seperti menyeruakkan semua ingatan tentangnya; tentang janji yang terucap seiring jemari kami bertautan. 
-
-	Segera setelah semuanya berakhir, aku pasti akan menghubungimu lagi.
-
-	Itulah yang dikataknnya sebelum dia pergi. Dan aku mendekap erat-erat kata-kata itu, menanti dalam harap. Namunm, yang datang padaku hanyalah surat-surat tanpa alamat darinya. 
-	Kini, ditempat yang sama, aku mengurai kembali kenangan-kenangan itu......
-	<br />
 	<?php
 		$sql = "SELECT * FROM buku WHERE judul = 'Notasi'";
 		$hasil = mysqli_query($koneksi,$sql);
@@ -35,6 +20,15 @@
 		else {
 			$genre="Komik";
 		}
+		?> <br />
+<div class="zoom">
+	<img src=" <?php echo $book[8]; ?> ">
+</div>
+<div class="isi">
+<p><b>
+	<?php echo "Synopsis : " ?>
+	<br />
+		<?php echo $book[7];
 		?> <br /> <?php
 		echo "ID Buku &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $book[0];
 		?> <br /> <?php
