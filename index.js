@@ -34,4 +34,5 @@ $(function() {
 						$this.animate({marginTop:-200}, 300); 
 					})		 
 				});
-            });
+			});
+			

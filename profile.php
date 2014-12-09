@@ -35,20 +35,21 @@
 		echo "Alamat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = " . $username[7];
 		?> <br /> <?php
 		echo "E-mail &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = " . $username[8];
-		?> <br /> <?php
+		?> <br /> 
+		<br />
+		<form method="POST" action="edit_profil.php">
+			<input type="submit" name="edit" value="Edit Profil" />	
+		</form>
+		<br />
+		<?php
 		}
 	else {
-		echo "User tidak Login"; }
+		echo "USER TIDAK LOGIN"; }
 ?></p>
-	<br />
-	<form method="POST" action="edit_profil.php">
-		<input type="submit" name="edit" value="Edit Profil" />
-		
-	</form>
-	<br />
+	<br /> <br />
 	<hr style="color: #4B7B9F;">
-	**daftar keinginan saya buku**
-	<br />
+	**daftar keinginan buku saya**
+	<br /> <br />
 	<hr style="color: #4B7B9F;">
 	**daftar peminjaman buku**
 </div>

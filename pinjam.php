@@ -9,7 +9,7 @@
 		$username = mysqli_fetch_array($hasil);
 		$sql="INSERT INTO tr_pinjam_hdr(tgl_pinjam, id_user) VALUES(NOW(),'".$username[0]."')";
 		mysqli_query($koneksi,$sql);
-		/*$sql="INSERT INTO tr_pinjam_dtl(id_hdr,id_buku) VALUES(id_hdr,*/
+		/*$sql="INSERT INTO tr_pinjam_dtl(id_hdr,id_buku) VALUES(tr_pinjam_hdr.id_hdr,*/
 	}
 	else {
 		echo "<script type='text/javascript'>";

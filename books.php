@@ -98,6 +98,10 @@ else {
 			<td><?php echo $buku[3]; ?></td>
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
+			<td>
+				<form method="POST" action="pinjam.php">
+					<input type="submit" name="tambah" value="  ADD  ">
+				</form>
 		</tr>
 		<?php } ?>
 		

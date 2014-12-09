@@ -46,7 +46,9 @@
 		?> <br /> 
 	<form method="POST" action="pinjam.php">
 		<input type="submit" name="pinjam" value="  PINJAM  ">
-		<input type="button" name="kembali" value=" KEMBALIKAN ">
+	</form>
+	<form method="POST" action="kembali.php">
+		<input type="submit" name="kembali" value="  KEMBALI  ">
 	</form>
 </b></p>
 </div>
