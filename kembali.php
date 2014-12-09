@@ -14,7 +14,6 @@
 		if($kembali>0){
 			$sql="UPDATE tr_pinjam_hdr SET tgl_kembali=now()";
 			mysqli_query($koneksi,$sql);
-		/*$sql="INSERT INTO tr_pinjam_dtl(id_hdr,id_buku) VALUES(id_hdr,*/
 		} else {
 		echo "<script type='text/javascript'>";
 		echo "alert('ANDA BELUM LOGIN !')";
