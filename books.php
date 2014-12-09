@@ -15,9 +15,19 @@
 Books kategori : 
 <form method="POST">
 <select name="kategori">
-	<option value="semua"> semua buku </option>
-	<option value="komik"> komik </option>
-	<option value="novel"> novel </option>
+	<option value=""> semua buku </option>
+	<?php 
+		$query = "select status from buku group by status";
+		$cb = mysqli_query($koneksi,$query);
+		//$cb2 = mysqli_fetch_row($cb);
+		while ($cb2 = mysqli_fetch_row($cb)){
+	?>
+		<?php if($_POST['kategori'] == $cb2[0]) {?>
+		<option value="<?php echo $cb2[0]; ?>" selected = 'selected'> <?php echo $cb2[0]; ?> </option>
+		<?php } else { ?>
+		<option value="<?php echo $cb2[0]; ?>"> <?php echo $cb2[0]; ?> </option>
+		<?php } ?>
+	<?php } ?>
 </select>
 <input type="submit" name="cari" value="  CARI  " />
 </form>
@@ -25,20 +35,13 @@ Books kategori :
 
 <?php 
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
-if($_POST['kategori']=="") {
-	$sql = "SELECT * FROM buku";
-	}
-else if($_POST['kategori']=="komik"){
-	$sql = "SELECT * FROM buku WHERE status = '2'";
-}
-else if($_POST['kategori']=="novel"){
-	$sql = "SELECT * FROM buku WHERE status = '1'";
-}
-else {
-	$sql = "SELECT * FROM buku";
+
+$sql = "SELECT * FROM buku WHERE 1=1 ";
+$sts = $_POST['kategori'];
+if($sts!=""){
+	$sql = $sql. "AND status = '".$sts."'";
 }
 	$hasil = mysqli_query($koneksi,$sql);
-	
 ?>
 <br />
 	<table width="656" border="2" cellspacing="0" cellpadding="2" style="color:white;">
@@ -50,66 +53,30 @@ else {
 			<td>Tahun Terbit</td>
 			<td>Jumlah Stock</td>
 		</tr>
-		<?php	
+		<?php
+			$i = 0;
 			while ($buku = mysqli_fetch_row($hasil)){
+			$i += 1;
 		?>
 		<tr>
-			<td><?php echo $buku[0]; ?></td>
+			<td><?php echo $i; ?></td>
 			<td>
-				<?php
-				if($buku[1]=="12menit"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Doraemon Petualangan"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Fireflies"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Inazuma Eleven"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Dawn Aria"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Jasmine (Cinta yang Menyembuhkan)"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Kuroko's Basketball"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Snow In The Heart"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Detective Conan"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Basara"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Notasi"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php }
-				else if($buku[1]=="Amore Cinta yang tak Terlupakan"){
-				?><a href="buku.php"><?php echo $buku[1]; ?></a>
-				<?php } ?>
+				<a href="buku.php?id_buku=<?php echo $buku[0];?>"><?php echo $buku[1] ?> </a>
 			</td>
 			<td><?php echo $buku[2]; ?></td>
 			<td><?php echo $buku[3]; ?></td>
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
 			<td>
-				<form method="POST" action="pinjam.php">
-					<input type="submit" name="tambah" value="  ADD  ">
+				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
+					<input type="submit" name="tambah" value=" PINJAM " >
 				</form>
 		</tr>
 		<?php } ?>
 		
 	</table>
 	</div>
-<!--tampilkan data buku dari database
-	tambahin kolom status di tabel buku, boolean jika 0 = komik
--->	<br />
+	<br />
 
 
 <?php
