@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2014 at 06:52 AM
+-- Generation Time: Dec 09, 2014 at 03:46 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -78,6 +78,26 @@ INSERT INTO `buku` (`id_buku`, `judul`, `pengarang`, `bahasa`, `tahun`, `stok`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `menu`
+--
+
+CREATE TABLE IF NOT EXISTS `menu` (
+  `id_menu` int(11) NOT NULL AUTO_INCREMENT,
+  `konten` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_menu`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`id_menu`, `konten`) VALUES
+(1, 'daniel'),
+(2, 'fedrico');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tr_pinjam_dtl`
 --
 
@@ -130,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(50) NOT NULL,
   `file` text NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `user`
@@ -139,7 +159,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id_user`, `nama`, `password`, `tempat`, `tanggal`, `bulan`, `tahun`, `alamat`, `email`, `file`) VALUES
 (24, 'fedrico', '$2y$10$HaloHaloHaloHaloHalo2uLkZPx67C1XXwJeQXkSDVgME.N8sXlOK', 'Jakarta', 22, 2, 1995, 'Tangerang', 'fedricoblaze@gmail.com', ''),
 (38, 'test', '$2y$10$HaloHaloHaloHaloHalo2uGHoclvkg37P.xCOraVOU6ZHaW.s/e.i', 'test', 2, 2, 2001, 'test', 'test', 'foto/IMG_2021.JPG'),
-(39, 'coba', '$2y$10$HaloHaloHaloHaloHalo2uhVloJoyml2UpgiE7j0oxOWJJE/Tk1di', 'ciba', 10, 10, 1950, 'cibu', 'cibi', 'foto/IMG_2084.JPG');
+(39, 'coba', '$2y$10$HaloHaloHaloHaloHalo2uhVloJoyml2UpgiE7j0oxOWJJE/Tk1di', 'ciba', 10, 10, 1950, 'cibu', 'cibi', 'foto/IMG_2084.JPG'),
+(40, 'daniel', '$2y$10$HaloHaloHaloHaloHalo2u5IrIC.bDUA/87gPWtU8iOVG4kmDJ1iG', 'qwsqw', 1, 1, 1945, 'qwsqw', 'wqs', 'foto/IMG_2185.JPG');
 
 --
 -- Constraints for dumped tables
