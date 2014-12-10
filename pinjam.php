@@ -17,6 +17,7 @@
 		$stock=$stock - 1;
 		$sql="UPDATE buku SET stok='$stock' where id_buku='$id_buku'"; /*stok data buku berkurang ketika di pinjam*/
 		mysqli_query($koneksi,$sql);
+		header('Location:profile.php');
 	
 	}
 	else { /*jika user tidak login maka buku tidak bisa di pinjam */

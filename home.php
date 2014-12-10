@@ -23,11 +23,12 @@ Oleh karena itu perpustakaan modern telah didefinisikan kembali sebagai tempat u
 	</div>
 	
 	<div class="formlogin">
+	<font color="white">
 	<?php
 		if($_SESSION['status']=="login"){
 		echo "Selamat datang , " . $_SESSION['nama'] . "!";
 		}
-	?>
+	?></font>
 	<br />
 	<br />
 	<form method="POST" action="logout.php">

@@ -113,7 +113,7 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-		<form method="POST" action="edit_profil.php">
+		<form method="POST" action="edit_user.php">
 			<input type="submit" name="edit" value="  Edit Profil  " />	
 		</form>
 			</td>
@@ -127,9 +127,22 @@
 		echo "USER TIDAK LOGIN"; }
 ?></p>
 	<br /> <br />
-	
+	<font color="black"><strong>Daftar Buku yang Dipinjam:</strong> </font>
 	<hr style="color: #4B7B9F;">
-	**daftar peminjaman buku**
+	
+	<?php
+	
+$sql= "SELECT tr_pinjam_hdr.id_buku, buku.judul 
+FROM tr_pinjam_hdr INNER JOIN buku 
+ON tr_pinjam_hdr.id_buku=buku.id_buku";
+$hasil = mysqli_query($koneksi,$sql);
+		while($daftar=mysqli_fetch_assoc($hasil)){
+	echo $daftar['judul'];
+	echo "</br>";
+	
+}
+		?>
+	</hr>	
 </div>	
 </div>
 	
