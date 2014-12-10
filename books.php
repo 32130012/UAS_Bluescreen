@@ -67,13 +67,19 @@ if($sts!=""){
 			<td><?php echo $buku[3]; ?></td>
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
-			<td>
+			
+				<?php
+				
+				?>
+				<td>
 				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
 					<input type="submit" name="tambah" value=" PINJAM " >
 				</form>
-			</td>
-		</tr>
-		<?php } ?>
+				</td>
+				<?php } ?>
+		</tr>	
+		
+		
 		
 	</table>
 	</div>

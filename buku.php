@@ -11,9 +11,7 @@
     </div>
 	</div>
 	<?php
-	//	if(isset($_GET('id_buku'))){
-	//		$id_buku=$_GET['id_buku'];
-	//	}
+	
 		$sql="SELECT * FROM buku where id_buku='".$_GET['id_buku']."'";
 		$hasil=mysqli_query($koneksi,$sql);
 		$book=mysqli_fetch_row($hasil);
