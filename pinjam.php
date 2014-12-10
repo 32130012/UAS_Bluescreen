@@ -1,4 +1,4 @@
-<?p
+<?php
 	include("koneksi.php");
 	SESSION_START();
 	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
