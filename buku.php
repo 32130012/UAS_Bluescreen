@@ -17,14 +17,16 @@
 		$sql="SELECT * FROM buku where id_buku='".$_GET['id_buku']."'";
 		$hasil=mysqli_query($koneksi,$sql);
 		$book=mysqli_fetch_row($hasil);
-		?>	<div class="zoom">
-	<img src=" <?php echo $book[8]; ?> ">
-</div>
+		?>	
+		<div class="zoom">
+		<img src=" <?php echo $book[8]; ?> " style="width: 200px; height: 300px;"/>
+		</div>
+		</div>
 <div class="isi">
 <p><b>
 
 	<br />
-		<table cellpadding="5" cellspacing="3">
+		<table cellpadding="10" cellspacing="7">
 			<tr>
 				<td valign="top"> Sinopsis </td>
 				<td valign="top"> : </td>

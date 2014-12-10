@@ -6,8 +6,8 @@
 	&copy; BlueScreen Library 2014
 	&nbsp
 	<a href="https://www.facebook.com/vdrico.blaze"><img src="gambar/fb.png" /></a> &nbsp
-	<a href="https://www.twitter.com"><img src="gambar/tw.png" /></a> &nbsp
-	<a href="https://instagram.com"><img src="gambar/in.png" /></a> &nbsp
+	<a href="https://twitter.com/V_drico"><img src="gambar/tw.png" /></a> &nbsp
+	<a href="https://instagram.com/daniel_agusta"><img src="gambar/in.png" /></a> &nbsp
 	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 	<a href="#">Back To Top</a>
 	</div>
