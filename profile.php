@@ -22,24 +22,104 @@
 		$hasil = mysqli_query($koneksi,$sql);
 		$username = mysqli_fetch_array($hasil); 
 		?> <br />
+		
 		<img src= "<?php	echo $username[9]; ?>" style="width:150px; height:200px" />
-		<br /> <?php
-		echo "ID Member &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp= " . $username[0];
-		?> <br /> <?php
-		echo "Nama User &nbsp &nbsp = " . $username[1];
-		?> <br /> <?php
-		echo "Tempat Lahir 	= " . $username[3];
-		?> <br /> <?php
-		echo "Tanggal Lahir = " . $username[4] . "/" . $username[5] . "/" . $username[6];
-		?> <br /> <?php
-		echo "Alamat &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = " . $username[7];
-		?> <br /> <?php
-		echo "E-mail &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp = " . $username[8];
-		?> <br /> 
 		<br />
+		<div class="isi">
+		<table cellpadding="10" cellspacing="7" style="margin-top:100px;">
+		<tr>
+			<td> 
+		<?php		
+		echo "ID Member ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[0];
+		?> 	</td> 
+		</tr> 	
+		<tr>
+			<td> 
+		<?php		
+		echo "Nama Member ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[1];
+		?> 	</td> 
+		</tr> 
+		<tr>
+			<td> 
+		<?php		
+		echo "Tempat Lahir ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[3];
+		?> 	</td> 
+		</tr>
+		<tr>
+			<td> 
+		<?php		
+		echo "Tanggal Lahir ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[4] . "/" . $username[5] . "/" . $username[6];
+		?> 	</td> 
+		</tr>
+		<tr>
+			<td> 
+		<?php		
+		echo "Alamat ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[7];
+		?> 	</td> 
+		</tr>
+		<tr>
+			<td> 
+		<?php		
+		echo "E-mail ";
+		?> 	</td> 
+			<td> 
+		<?php		
+			echo " = ";
+		?> 	</td>
+			<td> 
+		<?php		
+			echo $username[8];
+		?> 	</td> 
+		</tr>
+		<tr>
+			<td colspan="2">
 		<form method="POST" action="edit_profil.php">
-			<input type="submit" name="edit" value="Edit Profil" />	
+			<input type="submit" name="edit" value="  Edit Profil  " />	
 		</form>
+			</td>
+		</tr>
+		</table>
+		
 		<br />
 		<?php
 		}
@@ -47,9 +127,10 @@
 		echo "USER TIDAK LOGIN"; }
 ?></p>
 	<br /> <br />
+	
 	<hr style="color: #4B7B9F;">
 	**daftar peminjaman buku**
-	
+</div>	
 </div>
 	
 <?php

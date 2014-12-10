@@ -1,6 +1,7 @@
 <?php
 	include("koneksi.php");
 	SESSION_START();
+	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	$id_buku=$_GET['id_buku'];
 	if($_SESSION['status']=="login"){
 		$user = $_SESSION['nama'];

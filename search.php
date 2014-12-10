@@ -6,6 +6,8 @@
 		$hasil=mysqli_query($koneksi,$sql);
 		if(mysqli_num_rows($hasil)>0){
 				?><br />
+		<div class="konten">	
+			<h2 style="color: white;">Hasil Pencarian Buku</h2></br></br>
 		<table width="656" border="2" cellspacing="0" cellpadding="2" style="color:white;">
 			<tr>
 				<td>ID Buku</td>
