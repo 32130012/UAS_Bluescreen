@@ -60,11 +60,23 @@
 				<td> <?php echo $book[5]; ?> </td>
 			</tr>
 			<tr>
+				
+				<?php
+				$query = "SELECT id_user, id_buku, COUNT(id_buku) AS n FROM tr_pinjam_hdr group by id_user";
+				$hsl = mysqli_query($koneksi,$query);
+				$ttl = mysqli_fetch_assoc($hsl);
+				$jml = $ttl['n'];	
+				if($jml>3){
+				
+				}
+				else{
+				?>
 				<td colspan="2">
 					<form method="POST" action="pinjam.php?id_buku=<?php echo $book[0];?>">
 						<input type="submit" name="tambah" value="  PINJAM  ">
 					</form>  
 				</td>
+				<?php } ?>
 				<td>
 					<form method="POST" action="kembali.php?id_buku=<?php echo $book[0];?>">
 						<input type="submit" name="kembali" value="  KEMBALI  ">
