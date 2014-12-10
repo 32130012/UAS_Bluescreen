@@ -50,6 +50,16 @@
 				<td> <?php echo $book[3]; ?> </td>
 			</tr>
 			<tr>
+				<td> Tahun Terbit </td>
+				<td> : </td>
+				<td> <?php echo $book[4]; ?> </td>
+			</tr>
+			<tr>
+				<td> Jumlah Stok </td>
+				<td> : </td>
+				<td> <?php echo $book[5]; ?> </td>
+			</tr>
+			<tr>
 				<td colspan="2">
 					<form method="POST" action="pinjam.php?id_buku=<?php echo $book[0];?>">
 						<input type="submit" name="tambah" value="  PINJAM  ">

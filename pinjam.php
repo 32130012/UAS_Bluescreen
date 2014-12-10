@@ -9,6 +9,13 @@
 		$username = mysqli_fetch_array($hasil);
 		$sql="INSERT INTO tr_pinjam_hdr (tgl_pinjam, id_user, id_buku) VALUES(NOW(),'".$username[0]."','".$id_buku."')";
 		mysqli_query($koneksi,$sql);
+		$sql="SELECT stok FROM buku where id_buku='$id_buku'";
+		$hasil=mysqli_query($koneksi,$sql);
+		$book=mysqli_fetch_array($hasil);
+		$stock=$book['stok'];
+		$stock=$stock - 1;
+		$sql="UPDATE buku SET stok='$stock' where id_buku='$id_buku'";
+		mysqli_query($koneksi,$sql);
 	}
 	else {
 		echo "<script type='text/javascript'>";
