@@ -18,4 +18,5 @@ $sql=("UPDATE user set password='$password', tempat='$tempat', tanggal='$tanggal
 alamat='$alamat', email='$email', file='$tujuan' WHERE nama='$user' ");
 $hasil= mysqli_query($koneksi, $sql);
 move_uploaded_file($sumber,$tujuan);
+header('Location:index.php');
 ?>
