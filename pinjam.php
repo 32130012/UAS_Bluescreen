@@ -1,4 +1,4 @@
-<?php
+<?p
 	include("koneksi.php");
 	SESSION_START();
 	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
@@ -17,6 +17,7 @@
 		$stock=$stock - 1;
 		$sql="UPDATE buku SET stok='$stock' where id_buku='$id_buku'"; /*stok data buku berkurang ketika di pinjam*/
 		mysqli_query($koneksi,$sql);
+	
 	}
 	else { /*jika user tidak login maka buku tidak bisa di pinjam */
 		echo "<script type='text/javascript'>";

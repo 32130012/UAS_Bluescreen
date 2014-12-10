@@ -12,7 +12,7 @@
     </div>
 	</div>
 
-Books kategori : 
+<font color="white">Books kategori : </font>
 <form method="POST">
 <select name="kategori">
 	<option value=""> semua buku </option>
