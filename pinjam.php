@@ -9,7 +9,7 @@
 		$hasil = mysqli_query($koneksi,$sql);
 		$username = mysqli_fetch_array($hasil);
 		$sql="INSERT INTO tr_pinjam_hdr (tgl_pinjam, id_user, id_buku) VALUES(NOW(),'".$username[0]."','".$id_buku."')"; /* memasukan data buku yang dipinjam ke database */
-		mysqli_query($koneksi,$sql);
+		mysqli_query($koneksi,$sql);		
 		$sql="SELECT stok FROM buku where id_buku='$id_buku'";
 		$hasil=mysqli_query($koneksi,$sql);
 		$book=mysqli_fetch_array($hasil);

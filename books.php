@@ -12,7 +12,7 @@
     </div>
 	</div>
 
-<font color="white">Books kategori : </font>
+Books kategori : 
 <form method="POST">
 <select name="kategori">
 	<option value=""> semua buku </option>
@@ -77,6 +77,7 @@ if($sts!=""){
 				
 				}
 				else{
+				//cegah stok biar gak minus
 				?>
 				<td>
 				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
