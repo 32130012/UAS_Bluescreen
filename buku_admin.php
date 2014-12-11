@@ -1,5 +1,5 @@
 <?php
-	include("header.php");
+	include("header_admin.php");
 ?>
 
 Books kategori : 
@@ -7,9 +7,8 @@ Books kategori :
 <select name="kategori">
 	<option value=""> semua buku </option>
 	<?php 
-		$query = "select status from buku group by status";
+		$query = "SELECT status FROM buku group by status";
 		$cb = mysqli_query($koneksi,$query);
-		//$cb2 = mysqli_fetch_row($cb);
 		while ($cb2 = mysqli_fetch_row($cb)){
 	?>
 		<?php if($_POST['kategori'] == $cb2[0]) {?>
@@ -46,7 +45,7 @@ if($sts!=""){
 		<?php
 			$i = 0;
 			while ($buku = mysqli_fetch_row($hasil)){
-			$i += 1;
+			$i++;
 		?>
 		<tr>
 			<td><?php echo $i; ?></td>
@@ -57,22 +56,15 @@ if($sts!=""){
 			<td><?php echo $buku[3]; ?></td>
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
-			<?php
-			/*if($_SESSION['status']=="login"){
-			$user = $_SESSION['nama'];
-			$sque = "SELECT * FROM user WHERE nama = '".$user."'";
-			$hs = mysqli_query($koneksi,$sql);
-			$username = mysqli_fetch_array($hs);
-				$squer="SELECT * FROM tr_pinjam_hdr WHERE id_user='$username[0]'";
-				$hq=mysqli_query($koneksi,$sql);
-				
-				while($tmpil=mysqli_fetch_row($hq)){
-					$tmpil[4];
-				*/
-			?>
+			
 				<td>
-				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
-					<input type="submit" name="tambah" value=" PINJAM " <?php if($buku[5]==0){ ?> disabled="true" <?php } ?> >
+				<form method="POST" action="edit_buku.php?id_buku=<?php echo $buku[0];?>">
+					<input type="submit" name="edit" value=" EDIT " >
+				</form>
+				</td>
+				<td>
+				<form method="POST" action="delete_buku.php?id_buku=<?php echo $buku[0];?>">
+					<input type="submit" name="delete" value=" DELETE " >
 				</form>
 				</td>
 				<?php } ?>
@@ -81,10 +73,11 @@ if($sts!=""){
 		
 		
 	</table>
+	<a href="tambah_buku.php">+Tambah Buku</a>
 	</div>
 	<br />
 
 
 <?php
-	include("footer.php");
+	include("footer_admin.php");
 ?>

@@ -18,15 +18,21 @@ $hasil=mysqli_query($koneksi, $sql);
 	<hr style="color: #4B7B9F;">
 	
 	<!--menu bar -->
+	<?php
+		$sql="SELECT * FROM menu";
+		$hasil=mysqli_query($koneksi,$sql);
+		$menu=mysqli_fetch_row($hasil);
+	?>
 	<div id='cat-nav'>
 		<ul class='fl' id='secnav'>
 			<li><a href='check.php'>Home</a></li>
 			<li><a href='#'>Manage</a>
 			<ul id='sub-custom-nav'>
-				<li><a href='#'>Users</a></li>
-				<li><a href='#'>Buku</a></li>
-				<li><a href='#'>Menu</a></li>
+				<li><a href='user.php'>Users</a></li>
+				<li><a href='buku_admin.php'>Buku</a></li>
+				<li><a href='menu.php'>Menu</a></li>
 			</ul>
+			</li>
 			<li><a href='book.php'>Books</a></li>
 			<li><a href='galleri.php'>Galleri</a></li>
 			<li><a href='service.php'>Services</a></li>

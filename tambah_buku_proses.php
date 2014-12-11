@@ -27,19 +27,19 @@
 				echo "<script type='text/javascript'>";
 				echo "alert('ukuran gambar terlalu besar. MAX 2MB !')";
 				echo "</script>";
-				echo "<a href='index.php'>BACK TO HOME</a>";
+				echo "<a href='home_admin.php'>BACK TO HOME</a>";
 			}
 		} else {
 			echo "<script type='text/javascript'>";
 			echo "alert('jenis file yang diperbolehkan hanya gambar.')";
 			echo "</script>";
-			echo "<a href='index.php'>BACK TO HOME</a>";
+			echo "<a href='home_admin.php'>BACK TO HOME</a>";
 		}
 		if($judul == ""){
 			echo "<script type='text/javascript'>";
 			echo "alert('JUDUL BUKU TIDAK BOLEH KOSONG !')";
 			echo "</script>";
-			echo "<a href='index.php'>BACK TO HOME</a>";
+			echo "<a href='home_admin.php'>BACK TO HOME</a>";
 		}
 		else{
 		$sql = "SELECT judul FROM buku WHERE judul = '".$judul."'";
@@ -47,7 +47,7 @@
 		if(mysqli_num_rows($ada) == 0){
 			$sql ="INSERT INTO buku(judul, pengarang, bahasa, tahun, stok, status, sinopsis, gambar) VALUES ('$judul', '$pengarang', '$bahasa', '$tahun', '$stok', '$jenis', '$sinopsis', '$tujuan' )";
 			mysqli_query($koneksi,$sql);
-			header('Location:index.php');
+			header('Location:buku_admin.php');
 		}
 		else {
 			echo "<script type='text/javascript'>";

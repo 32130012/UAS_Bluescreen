@@ -103,7 +103,7 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-		<form method="POST" action="edit_user.php">
+		<form method="POST" action="edit_user.php?id_user=<?php echo $username[0];?>">
 			<input type="submit" name="edit" value="  Edit Profil  " />	
 		</form>
 			</td>

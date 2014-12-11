@@ -1,5 +1,5 @@
 <?php
-	include("header.php");
+	include("header_admin.php");
 ?>
 
 Books kategori : 
@@ -57,34 +57,13 @@ if($sts!=""){
 			<td><?php echo $buku[3]; ?></td>
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
-			<?php
-			/*if($_SESSION['status']=="login"){
-			$user = $_SESSION['nama'];
-			$sque = "SELECT * FROM user WHERE nama = '".$user."'";
-			$hs = mysqli_query($koneksi,$sql);
-			$username = mysqli_fetch_array($hs);
-				$squer="SELECT * FROM tr_pinjam_hdr WHERE id_user='$username[0]'";
-				$hq=mysqli_query($koneksi,$sql);
-				
-				while($tmpil=mysqli_fetch_row($hq)){
-					$tmpil[4];
-				*/
-			?>
-				<td>
-				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
-					<input type="submit" name="tambah" value=" PINJAM " <?php if($buku[5]==0){ ?> disabled="true" <?php } ?> >
-				</form>
-				</td>
-				<?php } ?>
 		</tr>	
-		
-		
-		
+		<?php }	?>
 	</table>
 	</div>
 	<br />
 
-
+</div>
 <?php
-	include("footer.php");
+	include("footer_admin.php");
 ?>
