@@ -7,5 +7,5 @@ include("header_admin.php");
 </ul>
 </div>
 <?php
-include("footer_admin.php");
+include("footer.php");
 ?>

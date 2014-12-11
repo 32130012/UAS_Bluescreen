@@ -59,7 +59,7 @@ include("header_admin.php");
 			<label>Sinopsis :</label>
 			</td>
 			<td>
-			<input type="textfield" name="sinopsis" value="" /> <br />
+			<textarea rows="4" name="sinopsis" value="" /> </textarea><br />
 			</td>
 		</tr>
 		<tr>
@@ -82,5 +82,5 @@ include("header_admin.php");
 	</form>
 
 <?php
-include("footer_admin.php");
+include("footer.php");
 ?>

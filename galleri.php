@@ -32,5 +32,5 @@
 <table>
 </div>
 <?php
-	include("footer_admin.php");
+	include("footer.php");
 ?>

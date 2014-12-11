@@ -51,7 +51,7 @@ if($sts!=""){
 		<tr>
 			<td><?php echo $i; ?></td>
 			<td>
-				<a href="buku.php?id_buku=<?php echo $buku[0];?>"><?php echo $buku[1] ?> </a>
+				<a href="buku_detail.php?id_buku=<?php echo $buku[0];?>"><?php echo $buku[1] ?> </a>
 			</td>
 			<td><?php echo $buku[2]; ?></td>
 			<td><?php echo $buku[3]; ?></td>

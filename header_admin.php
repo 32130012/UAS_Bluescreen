@@ -35,8 +35,8 @@ $hasil=mysqli_query($koneksi, $sql);
 			</li>
 			<li><a href='book.php'>Books</a></li>
 			<li><a href='galleri.php'>Galleri</a></li>
-			<li><a href='service.php'>Services</a></li>
-			<li><a href='aboutus.php'>About Us</a></li>
+			<li><a href='services.php'>Services</a></li>
+			<li><a href='about.php'>About Us</a></li>
 			</li>
 		</ul>
 		

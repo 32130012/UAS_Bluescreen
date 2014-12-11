@@ -34,5 +34,5 @@ Oleh karena itu perpustakaan modern telah didefinisikan kembali sebagai tempat u
 	</div>
 	
 <?php
-	include("footer_admin.php");
+	include("footer.php");
 ?>

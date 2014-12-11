@@ -17,8 +17,9 @@ $hasil=mysqli_query($koneksi,$sql); ?>
 				
 					<tr>
 					<td><img src=" <?php echo $pic[1]; ?>" style="width: 200px; height: 300px;" /></td>
-					<td><a href="delete_gambar.php?id_gambar=<?php echo $pic[1]; ?>">DELETE GAMBAR</a>
-						<form action="edit_gambar.php?id_gambar=<?php echo $pic[1]; ?>" enctype="multipart/form-data">
+					<td><a href="delete_gambar.php?id_gambar=<?php echo $pic[0]; ?>" > DELETE PICTURE </a>
+						
+						<form action="edit_gambar.php?id_gambar=<?php echo $pic[0]; ?>" enctype="multipart/form-data">
 						<label>CHANGE PICTURE</label></br>
 						<input type="file" name="change" value="CHANGE PICTURE" /></br>
 						<input type="submit" value="  SUBMIT  " />
@@ -32,11 +33,11 @@ $hasil=mysqli_query($koneksi,$sql); ?>
 	<?php } ?>
 <table>
 <br />
-<form action="tambah_gambar.php" enctype="multipart/form-data">
+<form action="tambah_gambar.php" method="POST" enctype="multipart/form-data">
 	<label>+TAMBAH GAMBAR</label><input type="file" name="banner" /><br />
 	<input type="submit" name="submit" value="  SUBMIT  " />
 </form>
 </div>
 <?php	
-	include("footer_admin.php");
+	include("footer.php");
 ?>
