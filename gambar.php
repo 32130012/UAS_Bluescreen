@@ -17,10 +17,8 @@ $hasil=mysqli_query($koneksi,$sql); ?>
 				
 					<tr>
 					<td><img src=" <?php echo $pic[1]; ?>" style="width: 200px; height: 300px;" /></td>
-					<td><form action="edit_gambar.php?id_gambar=<?php echo $pic[1]; ?>">
-						<input type="submit" name="delete" value="DELETE PICTURE" /></br>
-						</form>
-						<form action="delete_gambar.php?id_gambar=<?php echo $pic[1]; ?>" enctype="multipart/form-data">
+					<td><a href="delete_gambar.php?id_gambar=<?php echo $pic[1]; ?>">DELETE GAMBAR</a>
+						<form action="edit_gambar.php?id_gambar=<?php echo $pic[1]; ?>" enctype="multipart/form-data">
 						<label>CHANGE PICTURE</label></br>
 						<input type="file" name="change" value="CHANGE PICTURE" /></br>
 						<input type="submit" value="  SUBMIT  " />
