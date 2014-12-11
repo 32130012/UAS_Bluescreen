@@ -2,6 +2,7 @@
 	include("header.php");
 	$id_buku=$_POST['cari'];
 	if(isset($id_buku)){
+	//fungsi like untuk membuat pencarian berdasarkan huruf semakin akurat
 		$sql="SELECT * FROM buku WHERE judul LIKE '%$_POST[cari]%'";
 		$hasil=mysqli_query($koneksi,$sql);
 		if(mysqli_num_rows($hasil)>0){

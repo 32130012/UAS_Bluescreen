@@ -1,7 +1,7 @@
 <?php
 include("koneksi.php");
 session_start();
-
+//siapkan variabel untuk proses edit
 $user = $_SESSION['nama'];
 $password=$_POST['password'];
 $tempat=$_POST['tempat'];

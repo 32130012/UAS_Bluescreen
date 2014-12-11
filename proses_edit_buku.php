@@ -1,10 +1,7 @@
 <?php
 include("koneksi.php");
 
-	/*$sql="SELECT * FROM buku where id_buku='".$_GET['id_buku']."'";
-	$hasil=mysqli_query($koneksi,$sql);
-	$books=mysqli_fetch_row($hasil);
-	echo $books[0];*/
+	
 $judul = $_POST['judul'];
 $pengarang=$_POST['pengarang'];
 $bahasa=$_POST['bahasa'];

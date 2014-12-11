@@ -7,6 +7,7 @@ Books kategori :
 <select name="kategori">
 	<option value=""> semua buku </option>
 	<?php 
+	//tampilkan table status dari buku
 		$query = "SELECT status FROM buku group by status";
 		$cb = mysqli_query($koneksi,$query);
 		while ($cb2 = mysqli_fetch_row($cb)){
