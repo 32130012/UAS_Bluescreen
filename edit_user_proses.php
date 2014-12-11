@@ -1,7 +1,7 @@
 <?php
 include("koneksi.php");
 session_start();
-
+//deklarasi variabel yang dibutuhkan untuk proses edit user
 $user = $_SESSION['nama'];
 $password=$_POST['password'];
 $tempat=$_POST['tempat'];
@@ -10,10 +10,12 @@ $bulan=$_POST['bln'];
 $tahun=$_POST['thn'];
 $alamat=$_POST['alamat'];
 $email=$_POST['email'];
+//password yang user masukkan akan di enkripsi oleh sistem 
 $format = "$2y$10$";
 $hash = "HaloHaloHaloHaloHalo22";
 $salt = $format.$hash;
 $newpass = crypt($password,$salt);
+//proses memasukkan foto
 $files_name= $_FILES['foto']['name'];
 $files_tmp=	$_FILES['foto']['tmp_name'];
 $sumber=$files_tmp;
