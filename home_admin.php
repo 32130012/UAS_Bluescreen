@@ -2,15 +2,6 @@
 	include("header_admin.php");
 	session_start();
 ?>
-<div class="konten">
-	<div id="sliderFrame">
-    <div id="slider">
-        <img src="gambar/buku1.jpg" />
-        <img src="gambar/buku2.jpg" />
-		<img src="gambar/buku3.jpg" />
-		
-    </div>
-	</div>
 	
 <p align="justify" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Perpustakaan adalah sebuah koleksi buku dan majalah. Walaupun dapat diartikan sebagai koleksi pribadi perseorangan, namun perpustakaan lebih umum dikenal sebagai sebuah koleksi besar yang dibiayai dan dioperasikan oleh sebuah kota atau institusi, serta dimanfaatkan oleh masyarakat yang rata-rata tidak mampu membeli sekian banyak buku atas biaya sendiri.
 

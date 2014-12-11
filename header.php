@@ -26,17 +26,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 			<li><a href='books.php'>Books</a></li>
 			<li><a href='gallery.php'>Gallery</a></li>
 			<li><a href='services.php'>Services</a></li>
-			<li><a href='about.php'>About Us</a></li>
-<?php			
-	/*		while($baris=mysqli_fetch_assoc($hasil)){
-
-	echo "<ul>";
-	echo "<li>" . $baris['konten'] . "</li>";
-	echo "</ul>";
-	
-	//masih belum bisa ke link
-		}*/
-?>			
+			<li><a href='about.php'>About Us</a></li>		
 		</ul>
 		
 	<form method="POST" action="search.php"> 
@@ -45,3 +35,18 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	</form>
 	
 	</div>	
+	
+	<div class="konten">
+	<div id="sliderFrame">
+    <div id="slider">
+        <?php 
+			$sql="SELECT * FROM gambar";
+			$hasil=mysqli_query($koneksi,$sql);
+			$gbr=mysqli_fetch_row($hasil);
+			while($gbr=mysqli_fetch_row($hasil)){ ?>
+			<img src=" <?php echo $gbr[1]; ?> " />
+			<?php }
+		?>
+		
+    </div>
+	</div>

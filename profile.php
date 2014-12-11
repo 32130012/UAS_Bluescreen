@@ -2,15 +2,6 @@
 	include("header.php");
 ?>
 
-<div class="konten">
-	<div id="sliderFrame">
-    <div id="slider">
-        <img src="gambar/buku1.jpg" />
-        <img src="gambar/buku2.jpg" />
-		<img src="gambar/buku3.jpg" />
-		
-    </div>
-	</div>
 	
 	
 <font color="white"> PROFILE SAYA :<font> <br /><p>

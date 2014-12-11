@@ -40,3 +40,18 @@ $hasil=mysqli_query($koneksi, $sql);
 	</form>
 	
 	</div>	
+	
+	<div class="konten">
+	<div id="sliderFrame">
+    <div id="slider">
+        <?php 
+			$sql="SELECT * FROM gambar";
+			$hasil=mysqli_query($koneksi,$sql);
+			$gbr=mysqli_fetch_row($hasil);
+			while($gbr=mysqli_fetch_row($hasil)){ ?>
+			<img src=" <?php echo $gbr[1]; ?> " />
+			<?php }
+		?>
+		
+    </div>
+	</div>

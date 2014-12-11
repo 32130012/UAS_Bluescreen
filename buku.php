@@ -1,15 +1,7 @@
 <?php
 	include("header.php");
 ?>
-<div class="konten">
-	<div id="sliderFrame">
-    <div id="slider">
-        <img src="gambar/buku1.jpg" />
-        <img src="gambar/buku2.jpg" />
-		<img src="gambar/buku3.jpg" />
-		
-    </div>
-	</div>
+
 	<?php
 	
 		$sql="SELECT * FROM buku where id_buku='".$_GET['id_buku']."'";
@@ -61,21 +53,9 @@
 			</tr>
 			<tr>
 				
-				<?php
-				/*$user = $_SESSION['nama'];
-				$query = "SELECT id_user, id_buku, COUNT(id_buku) AS n FROM tr_pinjam_hdr group by id_user WHERE id_user = '$user'";
-				$hsl = mysqli_query($koneksi,$query);
-				$ttl = mysqli_fetch_assoc($hsl);
-				$jml = $ttl['n'];	
-				if($jml>0){
-				
-				}
-				else{ */
-				?>
-				
 				<td colspan="2">
 					<form method="POST" action="pinjam.php?id_buku=<?php echo $book[0];?>">
-						<input type="submit" name="tambah" value="  PINJAM  " <?php if($book[5]==0){ ?> disabled="false" <?php } ?> >
+						<input type="submit" name="tambah" value="  PINJAM  " <?php if($book[5]==0){ ?> disabled="true" <?php } ?> >
 					</form>  
 				</td>
 				<?php  

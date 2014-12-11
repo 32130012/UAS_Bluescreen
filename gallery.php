@@ -3,16 +3,7 @@
 	SESSION_START();
 ?>
 
-<br />
 
-	<div id="sliderFrame">
-    <div id="slider">
-        <img src="gambar/buku1.jpg" />
-        <img src="gambar/buku2.jpg" />
-		<img src="gambar/buku3.jpg" />
-		
-    </div>
-	</div>
 	<?php
 		$sql = "SELECT * FROM buku";
 		$hasil = mysqli_query($koneksi,$sql);

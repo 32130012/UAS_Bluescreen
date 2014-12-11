@@ -2,15 +2,7 @@
 	include("header.php");
 	session_start();
 ?>
-<div class="konten">
-	<div id="sliderFrame">
-    <div id="slider">
-        <img src="gambar/buku1.jpg" />
-        <img src="gambar/buku2.jpg" />
-		<img src="gambar/buku3.jpg" />
-		
-    </div>
-	</div>
+
 <font style="color:white; " >Kami menyediakan servis berupa:</font>
 <ol style="color: white; margin-left:20px;" >
 		<li>User bisa meminjam buku secara online tanpa harus ke perpustakkan</li>
