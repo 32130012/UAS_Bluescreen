@@ -3,9 +3,12 @@
  
 	$sql="SELECT * FROM user";
 	$hasil=mysqli_query($koneksi, $sql);
-	?><h2> DAFTAR MEMBER </h2><?php
+	?> 
+	</div>
+	<h2 style="margin-left:20px;"> DAFTAR MEMBER </h2>
+	<?php
 	while($use=mysqli_fetch_row($hasil)){ ?>
-		<table border="1">
+		<table border="1" style="margin-left:20px;">
 			<tr>
 				<td> ID User </td>
 				<td> Nama User </td>
@@ -22,7 +25,6 @@
 				</td>
 			</tr>
 		</table>
-	
 	<?php }
 	
 	include("footer_admin.php");

@@ -1,8 +1,6 @@
 <?php
 	include("header.php");
 ?>
-
-	
 	
 <font color="white"> PROFILE SAYA :<font> <br /><p>
 <?php
@@ -111,6 +109,7 @@
 		</table>
 		
 		<br />
+		</div>
 		<?php
 		}
 	else {
@@ -119,7 +118,6 @@
 	<br /> <br />
 	<font color="black"><strong>Daftar Buku yang Dipinjam:</strong> </font>
 	<hr style="color: #4B7B9F;">
-	
 	<?php
 
 $sql= "SELECT tr_pinjam_hdr.id_buku, tr_pinjam_hdr.tgl_pinjam, tr_pinjam_hdr.selisih, buku.judul 
@@ -128,7 +126,7 @@ ON tr_pinjam_hdr.id_buku=buku.id_buku WHERE id_user='$username[0]'";
 $hasil = mysqli_query($koneksi,$sql);
 	while($daftar=mysqli_fetch_assoc($hasil)){ 
 	?> 
-		<table width="656" border="2" cellspacing="0" cellpadding="0" style="color:white; margin-left:-80px;">
+		<table width="656" border="2" cellspacing="0" cellpadding="0" style="color:white;">
 			<tr>
 				<td>ID Buku</td>
 				<td>Judul Buku</td>
@@ -147,8 +145,6 @@ $hasil = mysqli_query($koneksi,$sql);
 	
 	</hr>	
 </div>
-</div>
-
 	
 <?php
 	include("footer.php");

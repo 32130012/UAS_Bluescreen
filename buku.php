@@ -1,7 +1,7 @@
 <?php
 	include("header.php");
 ?>
-
+<div class="konten">
 	<?php
 	
 		$sql="SELECT * FROM buku where id_buku='".$_GET['id_buku']."'";
@@ -11,7 +11,7 @@
 		<div class="zoom">
 		<img src=" <?php echo $book[8]; ?> " style="width: 200px; height: 300px;"/>
 		</div>
-		</div>
+</div>		
 <div class="isi">
 <p><b>
 
@@ -82,7 +82,7 @@
 			</tr>
 		</table>
 </b></p>
-
+</div>
 </div>
 <?php
 	include("footer.php");

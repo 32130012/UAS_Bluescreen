@@ -82,5 +82,5 @@ include("header_admin.php");
 	</form>
 
 <?php
-include("footer.php");
+include("footer_admin.php");
 ?>

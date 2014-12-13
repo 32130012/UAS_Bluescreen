@@ -38,12 +38,6 @@ $hasil=mysqli_query($koneksi, $sql);
 				</ul>
 			</li>
 		</ul>
-		
-	<form method="get" action="index.php"> 
-		<input type="text" name="zoom_query" style="width:150px; border:0px solid; height:20px; padding:0px 3px; position:relative; float: right; margin-top: 10px;" placeholder="book search"> 
-		<img src="gambar/searchbutton.gif" style="margin-top:10px; float: right;">
-	</form>
-	
 	</div>	
 	
 	<div class="konten">

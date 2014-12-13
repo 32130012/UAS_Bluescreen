@@ -32,5 +32,5 @@ $hasil=mysqli_query($koneksi,$sql); ?>
 </form>
 </div>
 <?php	
-	include("footer.php");
+	include("footer_admin.php");
 ?>
