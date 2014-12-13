@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2014 at 04:34 PM
+-- Generation Time: Dec 13, 2014 at 02:41 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -64,8 +64,8 @@ CREATE TABLE IF NOT EXISTS `buku` (
 --
 
 INSERT INTO `buku` (`id_buku`, `judul`, `pengarang`, `bahasa`, `tahun`, `stok`, `status`, `sinopsis`, `gambar`) VALUES
-(1, '12menit', 'Oka Aurora', 'Indonesia', '2013', 3, 'Novel', 'Elaine, sang pemain biola, yakin bahwa musik adalah segala-galanya. Namun, ayahnya menentang, menganggapnya sia-sia. \r\n\r\nTara, berusaha menguasai nada-nada snare drum meski memiliki keterbatasan pendengaran. Tetapi, luka masa lalunya terus menghantui.Lahang, di tengah deritanya, berusaha memenuhi janji pada sang ayah. Namun, dilema membuatnya ragu melangkah. \r\n\r\nRene bermimpi membawa mereka, tim marching band yang dilatihnya, menjadi juara.  Meskipun mereka hanya datang dari sebuah kota di pelos', 'gambar/buku/12menit.PNG'),
-(2, 'Doraemon Petualangan', 'Fujiko', 'Indonesia', '2002', 2, 'Komik', 'nobita kembali menginginkan sesuatu yang aneh. namun, kali ini dia menginginkan untuk berkeliling dunia dengan sizuka. didorong dengan paksaan yang kuat akhirnya pun doraemon memenuhi keinginann nobita. akhirnya, mereka pun berpetualang dengan kereta api ekspress milik doraemon.', 'gambar/buku/doraemon.PNG'),
+(1, '12menit', 'Oka Aurora', 'Indonesia', '2013', 4, 'Novel', 'Elaine, sang pemain biola, yakin bahwa musik adalah segala-galanya. Namun, ayahnya menentang, menganggapnya sia-sia. \r\n\r\nTara, berusaha menguasai nada-nada snare drum meski memiliki keterbatasan pendengaran. Tetapi, luka masa lalunya terus menghantui.Lahang, di tengah deritanya, berusaha memenuhi janji pada sang ayah. Namun, dilema membuatnya ragu melangkah. \r\n\r\nRene bermimpi membawa mereka, tim marching band yang dilatihnya, menjadi juara.  Meskipun mereka hanya datang dari sebuah kota di pelos', 'gambar/buku/12menit.PNG'),
+(2, 'Doraemon Petualangan', 'Fujiko', 'Indonesia', '2002', 3, 'Komik', 'nobita kembali menginginkan sesuatu yang aneh. namun, kali ini dia menginginkan untuk berkeliling dunia dengan sizuka. didorong dengan paksaan yang kuat akhirnya pun doraemon memenuhi keinginann nobita. akhirnya, mereka pun berpetualang dengan kereta api ekspress milik doraemon.', 'gambar/buku/doraemon.PNG'),
 (3, 'Fireflies', 'Aletheia Agatha', 'Indonesia', '2013', 1, 'Novel', '"Aku ingin minta maaf.\r\nkarena telah membuatmu khawakir. \r\nKamu harus percaya kalau aku telah berusaha \r\nmelakukan apa pun untuk bersamamu, \r\ntapi aku tidak bisa.\r\nKarena itu berjanjilah, kamu tetap akan menjadi\r\nseperti yang dulu aku kenal.\r\n\r\nTersenyum dan tertawa senantiasa..,\r\nsebab aku tidak pernah meninggalkanmu.\r\nDulu, sekarang, dan kapan pun juga,\r\nkuminka kamu tidak menyesali\r\nhari-hari yang kita lewati bersama.\r\nDan inilah gang terakhir kalinya kuucapkan padamu..\r\nAku mencintaimu dengan sepenuh hati."', 'gambar/buku/fireflies.PNG'),
 (4, 'Inazuma Eleven', 'Yabuno Tenya', 'Jepang', '2012', 5, 'Komik', 'Ini merupakan sejumput situasi putus asa Jepang karena permainan FFI (Football Frontier International) VS Qatar.\r\n	Dan Korea yang berkemampuan No.1 sudah menunggu di final... Apakah ini klimaks kualifikasi Asia.', 'gambar/buku/inazuma.PNG'),
 (5, 'Dawn Aria', 'Akaishi Michiyo', 'Inggris', '2012', 3, 'Komik', 'Akibat bencana gempa dahsyat yang melanda wilayah Tokyo, Aria yang tak punya rumah lagi akhirnya tinggal di rumah keluarga Nishimikado. Sementara itu, Natsuo makin diombang-ambingkan oleh perasaan sayangnya pada Aria.', 'gambar/buku/dawn_aria.PNG'),
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `konten` varchar(50) NOT NULL,
   `isi` text NOT NULL,
   PRIMARY KEY (`id_menu`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `menu`
@@ -123,7 +123,7 @@ INSERT INTO `menu` (`id_menu`, `konten`, `isi`) VALUES
 (3, 'Books', '0'),
 (4, 'Gallery', '0'),
 (5, 'Services', '<p align="justify" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perpustakaan dapat juga diartikan sebagai kumpulan informasi yang bersifat ilmu pengetahuan, hiburan, rekreasi, dan ibadah yang merupakan kebutuhan hakiki manusia.\r\n\r\nOleh karena itu perpustakaan modern telah didefinisikan kembali sebagai tempat untuk mengakses informasi dalam format apa pun, apakah informasi itu disimpan dalam gedung perpustakaan tersebut ataupun tidak. Dalam perpustakaan modern ini selain kumpulan buku tercetak, sebagian buku dan koleksinya ada dalam perpustakaan digital (dalam bentuk data yang bisa diakses lewat jaringan komputer).</P>\r\n'),
-(6, 'ABOUT', 'TEST EDIT MENU');
+(6, 'ABOUT', '<font align="justify"><p>&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Perpustakaan BlueSreen didirikan oleh Daniel & Fedrico pada tahun 2014. Alasan mereka mendirikan perpustakaan ini karena pada saat mereka\r\nmenjadi mahasiswa mereka mengalami kesulitan untuk mendapatkan buku referensi dan materi. Mereka tidak bisa membeli buku karena keterbatasan\r\nbiaya. Oleh karena inilah didirikan perpustakaan BlueSreen. .</p>\r\n<p>&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Mereka ingin agar semua orang bisa membaca buku tanpa harus ada kesulitan dalam\r\nmeminjam buku. Orang yang tidak punya biaya pun bisa membaca buku.Mereka ingin anak Indonesia agar bisa maju dan tidak kalah dengan negara lain dan bisa bersaing dengan anak luar negeri.</P>\r\n</font>');
 
 -- --------------------------------------------------------
 
@@ -139,15 +139,9 @@ CREATE TABLE IF NOT EXISTS `tr_pinjam_hdr` (
   `id_buku` int(11) NOT NULL,
   `selisih` int(11) NOT NULL,
   PRIMARY KEY (`id_hdr`),
-  KEY `id_user` (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=106 ;
-
---
--- Dumping data for table `tr_pinjam_hdr`
---
-
-INSERT INTO `tr_pinjam_hdr` (`id_hdr`, `tgl_pinjam`, `id_user`, `tgl_kembali`, `id_buku`, `selisih`) VALUES
-(102, '2014-12-25', 24, NULL, 1, 0);
+  KEY `id_user` (`id_user`),
+  KEY `id_buku` (`id_buku`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=111 ;
 
 -- --------------------------------------------------------
 
@@ -187,7 +181,8 @@ INSERT INTO `user` (`id_user`, `nama`, `password`, `tempat`, `tanggal`, `bulan`,
 -- Constraints for table `tr_pinjam_hdr`
 --
 ALTER TABLE `tr_pinjam_hdr`
-  ADD CONSTRAINT `tr_pinjam_hdr_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+  ADD CONSTRAINT `tr_pinjam_hdr_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `tr_pinjam_hdr_ibfk_2` FOREIGN KEY (`id_buku`) REFERENCES `buku` (`id_buku`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
