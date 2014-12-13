@@ -1,4 +1,4 @@
-<?php //filename: index.php
+<?php //filename: tampilan konten bawah untuk admin
 include("koneksi.php");
 		
 $sql="SELECT * FROM DB_NAME";
@@ -38,6 +38,12 @@ $hasil=mysqli_query($koneksi, $sql);
 				</ul>
 			</li>
 		</ul>
+		
+		<form method="POST" action="searchb.php"> 
+		<input type="text" name="cari" style="width:150px; border:0px solid; height:20px; padding:0px 3px; position:relative; float: right; margin-top: 10px;" placeholder="book search"> 
+		<img src="gambar/searchbutton.gif" style="margin-top:10px; float: right;">
+	</form>
+	
 	</div>	
 	
 	<div class="konten">

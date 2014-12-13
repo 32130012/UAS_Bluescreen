@@ -1,4 +1,4 @@
-<?php //filename: index.php
+<?php //filename: tampilan konten atas untuk user
 include("koneksi.php");
 session_start();
 $sql="SELECT * FROM menu";
@@ -22,15 +22,15 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	<div id='cat-nav'>
 		<ul class='fl' id='secnav'>
 		<?php
-			$sql="SELECT *FROM menu";
+			$sql="SELECT *FROM menu"; //untuk menampilkan tab menu dari database
 			$hasil=mysqli_query($koneksi,$sql);
 			while($menu=mysqli_fetch_row($hasil)){ ?>
-				<li><a href="konten.php?id_menu=<?php echo $menu[0]; ?>"> <?php echo $menu[1]; ?></a><li>
+				<li><a href="konten.php?id_menu=<?php echo $menu[0]; ?>"> <?php echo $menu[1]; ?></a><li> 
 		<?php	}
 		?>
 		</ul>
 		
-	<form method="POST" action="search.php"> 
+	<form method="POST" action="search.php"> <!-- button untuk mencari nama buku -->
 		<input type="text" name="cari" style="width:150px; border:0px solid; height:20px; padding:0px 3px; position:relative; float: right; margin-top: 10px;" placeholder="book search"> 
 		<img src="gambar/searchbutton.gif" style="margin-top:10px; float: right;">
 	</form>
@@ -41,7 +41,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	<div id="sliderFrame">
     <div id="slider">
         <?php 
-			$sql="SELECT * FROM gambar";
+			$sql="SELECT * FROM gambar"; //menampilkan gambar slider yang ada didatabase
 			$hasil=mysqli_query($koneksi,$sql);
 			$gbr=mysqli_fetch_row($hasil);
 			while($gbr=mysqli_fetch_row($hasil)){ ?>

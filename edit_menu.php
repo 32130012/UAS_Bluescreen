@@ -1,9 +1,9 @@
-<?php
+<?php //
 include("header_admin.php");
 ?>
 <h2>EDIT MENU</h2>
 <?php
-	$sql="SELECT *FROM menu";
+	$sql="SELECT *FROM menu"; //select semua nama pada tab menu yang ada di database
 	$hasil=mysqli_query($koneksi,$sql); 
 	$i=1; ?>
 	<table border="1">
@@ -34,6 +34,7 @@ include("header_admin.php");
 <?php	$i +=1;} ?>
 </table>
 <a href="tambah_menu.php">+TAMBAH MENU</a>
+</div>
 <?php
 include("footer_admin.php");
 ?>

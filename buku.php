@@ -1,4 +1,4 @@
-<?php
+<?php //filename: untuk tampilan detail buku
 	include("header.php");
 ?>
 <div class="konten">
@@ -55,28 +55,22 @@
 				
 				<td colspan="2">
 					<form method="POST" action="pinjam.php?id_buku=<?php echo $book[0];?>">
-						<input type="submit" name="tambah" value="  PINJAM  " <?php if($book[5]==0){ ?> disabled="true" <?php } ?> >
+						<input type="submit" name="tambah" value="  PINJAM  " <?php if($book[5]==0){ ?> disabled="true" <?php } ?> />
 					</form>  
 				</td>
 				<?php  
-				if($_SESSION['status']=="login"){
+				if($_SESSION['status']=="login"){ //jika user login
 				$user = $_SESSION['nama']; }
 				$squery = "SELECT * FROM user WHERE nama = '".$user."'";
 				$hasils = mysqli_query($koneksi,$squery);
 				$username = mysqli_fetch_array($hasils);
 				$id=$username[0];
-				$squeri = "SELECT * FROM tr_pinjam_hdr WHERE id_user='$id'";
+				$squeri = "SELECT tgl_kembali FROM tr_pinjam_hdr WHERE id_buku='$book[0]' GROUP BY id_user"; //mencegah agar stok tidak bertambah terus
 				$hsil = mysqli_query($koneksi,$squeri);
-				$i=0;
-				while($cek = mysqli_fetch_row($hsil)){
-					$ad[$i]=$cek[4];
-					$i++;
-				}
-					if(in_array($book[0], $ad)){ 
-				?>
+				while($cek = mysqli_fetch_row($hsil)){	?>
 				<td>
 					<form method="POST" action="kembali.php?id_buku=<?php echo $book[0];?>">
-						<input type="submit" name="kembali" value="  KEMBALI  " >
+						<input type="submit" name="kembali" value="  KEMBALI  " <?php if($cek[0]==""){ } else { ?> disabled="true" <?php } ?> />
 					</form> 
 				</td> <?php } ?>
 			</tr>

@@ -1,4 +1,4 @@
-<?php
+<?php //fungsi button search untuk admin
 	include("header_admin.php");
 	$id_buku=$_POST['cari'];
 	if(isset($id_buku)){
@@ -26,16 +26,22 @@
 			<tr>
 				<td><?php echo $i; ?></td>
 				<td>
-					<a href="buku.php?id_buku=<?php echo $buku[0];?>"><?php echo $buku[1] ?> </a>
+					<a href="buku_detail.php?id_buku=<?php echo $buku[0];?>"><?php echo $buku[1] ?> </a>
 				</td>
 				<td><?php echo $buku[2]; ?></td>
 				<td><?php echo $buku[3]; ?></td>
 				<td><?php echo $buku[4]; ?></td>
 				<td><?php echo $buku[5]; ?></td>
 				<td>
-					<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
-						<input type="submit" name="tambah" value=" PINJAM " >
-					</form>
+				<form method="POST" action="edit_buku.php?id_buku=<?php echo $buku[0];?>">
+					<input type="submit" name="edit" value=" EDIT " >
+				</form>
+				</td>
+				<td>
+				<form method="POST" action="delete_buku.php?id_buku=<?php echo $buku[0];?>">
+					<input type="submit" name="delete" value=" DELETE " >
+				</form>
+				</td>
 			</tr>
 			<?php } ?>
 			
@@ -46,7 +52,6 @@
 			echo "<script type='text/javascript'>";
 			echo "alert('Buku Tidak Ditemukan !')";
 			echo "</script>";
-			echo "<a href='check_login.php'>BACK TO HOME</a>";
 		}
 	}
 ?>

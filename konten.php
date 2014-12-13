@@ -1,5 +1,5 @@
 <?php
-	include("header.php");
+	include("header.php"); //filename: untuk tampilan isi konten body untuk user
 	
 	$sql="SELECT isi FROM menu WHERE id_menu='".$_GET['id_menu']."'";
 	$hasil=mysqli_query($koneksi,$sql);
