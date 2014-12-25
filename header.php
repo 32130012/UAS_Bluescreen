@@ -1,8 +1,9 @@
 <?php //filename: index.php
 include("koneksi.php");
-		
+session_start();
 $sql="SELECT * FROM menu";
 $hasil=mysqli_query($koneksi, $sql);
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 ?>
 <html>
 <head>

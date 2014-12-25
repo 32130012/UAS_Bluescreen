@@ -68,23 +68,12 @@ if($sts!=""){
 			<td><?php echo $buku[4]; ?></td>
 			<td><?php echo $buku[5]; ?></td>
 			
-				<?php
-				$query = "SELECT id_user, id_buku, COUNT(id_buku) AS n FROM tr_pinjam_hdr group by id_user";
-				$hsl = mysqli_query($koneksi,$query);
-				$ttl = mysqli_fetch_assoc($hsl);
-				$jml = $ttl['n'];	
-				if($jml>3){
-				
-				}
-				else{
-				//cegah stok biar gak minus
-				?>
 				<td>
 				<form method="POST" action="pinjam.php?id_buku=<?php echo $buku[0];?>">
-					<input type="submit" name="tambah" value=" PINJAM " >
+					<input type="submit" name="tambah" value=" PINJAM " <?php if($buku[5]==0){ ?> disabled="true" <?php } ?> >
 				</form>
 				</td>
-				<?php } } ?>
+				<?php } ?>
 		</tr>	
 		
 		

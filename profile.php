@@ -1,6 +1,5 @@
 <?php
 	include("header.php");
-	SESSION_START();
 ?>
 
 <div class="konten">
@@ -13,9 +12,9 @@
     </div>
 	</div>
 	
+	
 <font color="white"> PROFILE SAYA :<font> <br /><p>
 <?php
-	error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	if($_SESSION['status']=="login"){
 		$user = $_SESSION['nama'];
 		$sql = "SELECT * FROM user WHERE nama = '".$user."'";
@@ -131,17 +130,30 @@
 	<hr style="color: #4B7B9F;">
 	
 	<?php
-	
-$sql= "SELECT tr_pinjam_hdr.id_buku, buku.judul 
-FROM tr_pinjam_hdr INNER JOIN buku 
-ON tr_pinjam_hdr.id_buku=buku.id_buku";
+
+$sql= "SELECT tr_pinjam_hdr.id_buku, tr_pinjam_hdr.tgl_pinjam, tr_pinjam_hdr.selisih, buku.judul 
+FROM tr_pinjam_hdr  INNER JOIN buku 
+ON tr_pinjam_hdr.id_buku=buku.id_buku WHERE id_user='$username[0]'";
 $hasil = mysqli_query($koneksi,$sql);
-		while($daftar=mysqli_fetch_assoc($hasil)){
-	echo $daftar['judul'];
-	echo "</br>";
+	while($daftar=mysqli_fetch_assoc($hasil)){ 
+	?> 
+		<table width="656" border="2" cellspacing="0" cellpadding="0" style="color:white; margin-left:-80px;">
+			<tr>
+				<td>ID Buku</td>
+				<td>Judul Buku</td>
+				<td>Tanggal Pinjam</td>
+				<td>Denda</td>
+			</tr>
+			<tr>
+				<td> <?php echo $daftar['id_buku']; ?> </td>
+				<td> <?php echo $daftar['judul']; ?> </td>
+				<td> <?php echo $daftar['tgl_pinjam']; ?>	</td>
+				<td> <?php echo $daftar['selisih']; ?> </td>
+			</tr>
+		</table>
+	<?php }	
+	echo "note: Batas Lama Peminjaman adalah 7 hari"; ?>
 	
-}
-		?>
 	</hr>	
 </div>	
 </div>
