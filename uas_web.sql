@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2014 at 10:04 AM
+-- Generation Time: Dec 28, 2014 at 04:34 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `buku` (
   `sinopsis` varchar(1000) NOT NULL,
   `gambar` text NOT NULL,
   PRIMARY KEY (`id_buku`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `buku`
@@ -76,7 +76,8 @@ INSERT INTO `buku` (`id_buku`, `judul`, `pengarang`, `bahasa`, `tahun`, `stok`, 
 (11, 'Notasi', 'Morra Q', 'Indonesia', '2013', 2, 'Novel', 'Rasanya, sudah lama sekali sejak aku dan dia melihat pelangi dilangit utara Pogung. \r\n	Namun, kembali ke kota ini, seperti menyeruakkan semua ingatan tentangnya; tentang janji yang terucap seiring jemari kami bertautan. \r\n\r\n	Segera setelah semuanya berakhir, aku pasti akan menghubungimu lagi.\r\n\r\nItulah yang dikataknnya sebelum dia pergi. Dan aku mendekap erat-erat kata-kata itu, menanti dalam harap. Namunm, yang datang padaku hanyalah surat-surat tanpa alamat darinya. \r\nKini, ditempat yang sama, aku mengurai kembali kenangan-kenangan itu..', 'gambar/buku/notasi.PNG'),
 (13, 'Amore Cinta yang tak Terlupakan', 'Rini Zabirudin', 'Indonesia', '2013', 2, 'Novel', 'Cinta pertama tidak pernah mati. Mungkin itulah kalimat yang cocok untuk melukiskan keadaan Mel saat ini. Meskipun telah ada seorang pria dengan predikat nyaris sempurna di sisinya, jauh di dalam hatinya nama Elang tetap terukir.\r\n\r\nSetelah bertahun-tahun hidup selibat, Elang tidak berharap lagi untuk bisa menemukan sebentuk cinta. Dia bahkan sudah berhenti mencarinya! Elang sadar sepenuhnya bahwa hidup yang dia jalani sekarang bukanlah jenis hidup yang bisa melibatkan cinta.\r\n\r\nKetika takdir mempertemukan mereka, mampukah Mel dan Elang mengumpulkan kembali serpihan-serpihan hati yang dulu pernah mereka patahkan? Ataukah mereka harus menyerah saat nyawa menjadi taruhan masa depan mereka?', 'gambar/buku/amore.PNG'),
 (15, 'maenan', '', 'kalsjhdf', '1999', 9, 'manga', 'askljhfaskjldhf', 'gambar_buku/'),
-(16, 'ada lagi', 'sadfsdf', 'jepang', '1999', 10, 'manga', 'hanya kita', '');
+(16, 'ada lagi', 'sadfsdf', 'jepang', '1999', 10, 'manga', 'hanya kita', ''),
+(17, 'sdfghj', 'dfghjk', 'fghj', '1999', 9, 'manga', 'dfghjfghjkfghj', 'gambar/bukubukuBS.png');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `gambar` (
   `id_gambar` int(11) NOT NULL AUTO_INCREMENT,
   `banner` text NOT NULL,
   PRIMARY KEY (`id_gambar`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `gambar`
@@ -96,15 +97,8 @@ CREATE TABLE IF NOT EXISTS `gambar` (
 
 INSERT INTO `gambar` (`id_gambar`, `banner`) VALUES
 (1, 'gambar/buku1.JPG'),
-(2, 'gambar/buku2.JPG'),
 (3, 'gambar/buku3.JPG'),
-(4, 'gambar/'),
-(5, 'gambar/'),
-(6, 'gambar/'),
-(7, 'gambar/'),
-(8, 'gambar/'),
-(9, 'gambar/'),
-(10, 'gambar/');
+(12, 'gambar/bukubanner.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,21 +109,21 @@ INSERT INTO `gambar` (`id_gambar`, `banner`) VALUES
 CREATE TABLE IF NOT EXISTS `menu` (
   `id_menu` int(11) NOT NULL AUTO_INCREMENT,
   `konten` varchar(50) NOT NULL,
-  `submenu` int(11) NOT NULL,
+  `isi` text NOT NULL,
   PRIMARY KEY (`id_menu`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`id_menu`, `konten`, `submenu`) VALUES
-(1, 'Home', 0),
-(2, 'Profile', 0),
-(3, 'Books', 0),
-(4, 'Gallery', 0),
-(5, 'Services', 0),
-(6, 'About Us', 0);
+INSERT INTO `menu` (`id_menu`, `konten`, `isi`) VALUES
+(1, 'Home', '<p align="justify" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Perpustakaan adalah sebuah koleksi buku dan majalah. Walaupun dapat diartikan sebagai koleksi pribadi perseorangan, namun perpustakaan lebih umum dikenal sebagai sebuah koleksi besar yang dibiayai dan dioperasikan oleh sebuah kota atau institusi, serta dimanfaatkan oleh masyarakat yang rata-rata tidak mampu membeli sekian banyak buku atas biaya sendiri.\r\n\r\nTetapi, dengan koleksi dan penemuan media baru selain buku untuk menyimpan informasi, banyak perpustakaan kini juga merupakan tempat penyimpanan dan/atau akses ke map, cetak atau hasil seni lainnya, mikrofilm, mikrofiche, tape audio, CD, LP, tape video dan DVD. Selain itu, perpustakaan juga menyediakan fasilitas umum untuk mengakses gudang data CD-ROM dan internet.</p>\r\n\r\n\r\n<p align="justify" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perpustakaan dapat juga diartikan sebagai kumpulan informasi yang bersifat ilmu pengetahuan, hiburan, rekreasi, dan ibadah yang merupakan kebutuhan hakiki manusia.\r\n\r\nOleh karena itu perpustakaan modern telah didefinisikan kembali sebagai tempat untuk mengakses informasi dalam format apa pun, apakah informasi itu disimpan dalam gedung perpustakaan tersebut ataupun tidak. Dalam perpustakaan modern ini selain kumpulan buku tercetak, sebagian buku dan koleksinya ada dalam perpustakaan digital (dalam bentuk data yang bisa diakses lewat jaringan komputer).</P>\r\n'),
+(2, 'Profile', '0'),
+(3, 'Books', '0'),
+(4, 'Gallery', '0'),
+(5, 'Services', '<p align="justify" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perpustakaan dapat juga diartikan sebagai kumpulan informasi yang bersifat ilmu pengetahuan, hiburan, rekreasi, dan ibadah yang merupakan kebutuhan hakiki manusia.\r\n\r\nOleh karena itu perpustakaan modern telah didefinisikan kembali sebagai tempat untuk mengakses informasi dalam format apa pun, apakah informasi itu disimpan dalam gedung perpustakaan tersebut ataupun tidak. Dalam perpustakaan modern ini selain kumpulan buku tercetak, sebagian buku dan koleksinya ada dalam perpustakaan digital (dalam bentuk data yang bisa diakses lewat jaringan komputer).</P>\r\n'),
+(6, 'ABOUT', 'TEST EDIT MENU');
 
 -- --------------------------------------------------------
 
@@ -146,14 +140,13 @@ CREATE TABLE IF NOT EXISTS `tr_pinjam_hdr` (
   `selisih` int(11) NOT NULL,
   PRIMARY KEY (`id_hdr`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=106 ;
 
 --
 -- Dumping data for table `tr_pinjam_hdr`
 --
 
 INSERT INTO `tr_pinjam_hdr` (`id_hdr`, `tgl_pinjam`, `id_user`, `tgl_kembali`, `id_buku`, `selisih`) VALUES
-(101, '2014-12-25', 24, NULL, 7, 0),
 (102, '2014-12-25', 24, NULL, 1, 0);
 
 -- --------------------------------------------------------
@@ -174,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(50) NOT NULL,
   `file` text NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `user`
@@ -183,7 +176,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`id_user`, `nama`, `password`, `tempat`, `tanggal`, `bulan`, `tahun`, `alamat`, `email`, `file`) VALUES
 (24, 'fedrico', '$2y$10$HaloHaloHaloHaloHalo2uKarn0z6kp1tTvnTy6HFepFfzaCJ6pDy', 'asdf', 19, 12, 2002, 'asdf', 'sdaf', 'foto/'),
 (42, 'asdf', '$2y$10$HaloHaloHaloHaloHalo2u.74POU7gtur8R7FYqzV.HMBhTw.v7LG', 'zxcv', 2, 2, 2001, 'asdf', 'email.com', ''),
-(43, 'baru', '$2y$10$HaloHaloHaloHaloHalo2uEVuZZ/QTp9Fb/DpoCoUNJykbIrhn1AS', 'dimana', 2, 2, 2002, 'sadfsadf', 'asdf@gmail.com', '');
+(43, 'baru', '$2y$10$HaloHaloHaloHaloHalo2uEVuZZ/QTp9Fb/DpoCoUNJykbIrhn1AS', 'dimana', 2, 2, 2002, 'sadfsadf', 'asdf@gmail.com', ''),
+(44, 'fed', '$2y$10$HaloHaloHaloHaloHalo2urOc7t26xKErQcw6jnJFG0O1fc7sBWFm', 'jkt', 12, 12, 1999, 'tgr', 'fed@ved.com', 'foto/IMG_2018.JPG');
 
 --
 -- Constraints for dumped tables
