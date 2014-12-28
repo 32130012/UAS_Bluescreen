@@ -3,9 +3,8 @@ include("header_admin.php");
 ?>
 <ul>
 	<li> <a href="gambar.php"> Change Banner </a> </li>
-	<li> <a hre="#"> Edit Menu </a> </li>
-</ul>
+	<li> <a href="edit_menu.php"> Edit Menu </a> </li>
 </div>
 <?php
-include("footer.php");
+include("footer_admin.php");
 ?>

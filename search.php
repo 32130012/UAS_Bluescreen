@@ -41,6 +41,7 @@
 		</table>
 		</div>
 		<br />
+	</div>
 		<?php } else {		
 			echo "<script type='text/javascript'>";
 			echo "alert('Buku Tidak Ditemukan !')";
@@ -48,5 +49,6 @@
 			echo "<a href='check_login.php'>BACK TO HOME</a>";
 		}
 	}
+
 include("footer.php");
 ?>

@@ -3,8 +3,8 @@
  
 	$sql="SELECT * FROM user";
 	$hasil=mysqli_query($koneksi, $sql);
+	?><h2> DAFTAR MEMBER </h2><?php
 	while($use=mysqli_fetch_row($hasil)){ ?>
-	<h2> DAFTAR MEMBER </h2>
 		<table border="1">
 			<tr>
 				<td> ID User </td>

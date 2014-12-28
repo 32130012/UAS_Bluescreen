@@ -146,8 +146,9 @@ $hasil = mysqli_query($koneksi,$sql);
 	echo "note: Batas Lama Peminjaman adalah 7 hari"; ?>
 	
 	</hr>	
-</div>	
 </div>
+</div>
+
 	
 <?php
 	include("footer.php");

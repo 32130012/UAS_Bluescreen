@@ -21,12 +21,13 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 	<!--menu bar -->
 	<div id='cat-nav'>
 		<ul class='fl' id='secnav'>
-			<li><a href='check_login.php'>Home</a></li>
-			<li><a href='profile.php'>Profile</a></li>
-			<li><a href='books.php'>Books</a></li>
-			<li><a href='gallery.php'>Gallery</a></li>
-			<li><a href='services.php'>Services</a></li>
-			<li><a href='about.php'>About Us</a></li>		
+		<?php
+			$sql="SELECT *FROM menu";
+			$hasil=mysqli_query($koneksi,$sql);
+			while($menu=mysqli_fetch_row($hasil)){ ?>
+				<li><a href="konten.php?id_menu=<?php echo $menu[0]; ?>"> <?php echo $menu[1]; ?></a><li>
+		<?php	}
+		?>
 		</ul>
 		
 	<form method="POST" action="search.php"> 
@@ -50,3 +51,4 @@ error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 		
     </div>
 	</div>
+	

@@ -25,18 +25,17 @@ $hasil=mysqli_query($koneksi, $sql);
 	?>
 	<div id='cat-nav'>
 		<ul class='fl' id='secnav'>
-			<li><a href='check.php'>Home</a></li>
+			<?php
+			$sql="SELECT *FROM menu";
+			$hasil=mysqli_query($koneksi,$sql);
+			$menu=mysqli_fetch_row($hasil) ?>
+			<li><a href='home_admin.php'><?php echo $menu[1]; ?></a></li>
 			<li><a href='#'>Manage</a>
-			<ul id='sub-custom-nav'>
-				<li><a href='user.php'>Users</a></li>
-				<li><a href='buku_admin.php'>Buku</a></li>
-				<li><a href='menu.php'>Menu</a></li>
-			</ul>
-			</li>
-			<li><a href='book.php'>Books</a></li>
-			<li><a href='galleri.php'>Galleri</a></li>
-			<li><a href='services.php'>Services</a></li>
-			<li><a href='about.php'>About Us</a></li>
+				<ul id='sub-custom-nav'>
+					<li><a href='user.php'>Users</a></li>
+					<li><a href='buku_admin.php'>Buku</a></li>
+					<li><a href='menu.php'>Menu</a></li>
+				</ul>
 			</li>
 		</ul>
 		
@@ -55,7 +54,7 @@ $hasil=mysqli_query($koneksi, $sql);
 			$hasil=mysqli_query($koneksi,$sql);
 			$gbr=mysqli_fetch_row($hasil);
 			while($gbr=mysqli_fetch_row($hasil)){ ?>
-			<img src=" <?php echo $gbr[1]; ?> " />
+			<img src=" <?php echo $gbr[1]; ?> " style="width:1000px; height:200px;" />
 			<?php }
 		?>
 		

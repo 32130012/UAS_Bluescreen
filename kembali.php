@@ -45,8 +45,8 @@
 				$tgl=mysqli_fetch_array($hasil);
 				echo $tgl['selisih'];
 				if($tgl['selisih']>7){
-					$denda=$tgl['selisih'] * 1000;
-					
+					$denda=$tgl['selisih']-7;
+					$denda=$denda*1000;
 					$sql="UPDATE tr_pinjam_hdr set selisih='$denda' WHERE id_buku = '$id_buku'";
 					mysqli_query($koneksi,$sql);
 				} else {

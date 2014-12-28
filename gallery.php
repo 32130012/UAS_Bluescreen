@@ -9,7 +9,7 @@
 		$hasil = mysqli_query($koneksi,$sql);
 		$pic = mysqli_fetch_array($hasil); 
 		?>
-		
+</div>		
 <h2><font color="white">&nbsp &nbsp BlueScreen Gallery</h2>
 <table border="0" width="965" style="margin-left:400px;">
 	<?php	
@@ -30,6 +30,7 @@
 		</tr>
 	<?php } ?>
 <table>
+
 <?php
 	include("footer.php");
 ?>
