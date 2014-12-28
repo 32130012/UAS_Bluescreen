@@ -1,16 +1,16 @@
 <?php
-	include("header.php");
+	include("header.php"); //halaman pada menu buku yang ditampilkan untuk user
+	//menu buku bersifat statik
 ?>
-
+<!--combobox untu mensortir berdasarkan kategori buku-->
 Books kategori : 
 <form method="POST">
 <select name="kategori">
 	<option value=""> semua buku </option>
 	<?php 
-		$query = "select status from buku group by status";
+		$query = "select status from buku group by status"; /*mengambil data pada kolom status di tabel buku*/
 		$cb = mysqli_query($koneksi,$query);
-		//$cb2 = mysqli_fetch_row($cb);
-		while ($cb2 = mysqli_fetch_row($cb)){
+		while ($cb2 = mysqli_fetch_row($cb)){ /*looping ketika data pada kolom status masih ada yang belum diselect*/
 	?>
 		<?php if($_POST['kategori'] == $cb2[0]) {?>
 		<option value="<?php echo $cb2[0]; ?>" selected = 'selected'> <?php echo $cb2[0]; ?> </option>
